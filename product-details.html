@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — RetroSpin</title>
+  <meta name="description" content="View product specifications, condition grading, tracklists, customer reviews, and audiophile gear details at RetroSpin.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            darkBrown: '#29231D',
+            vintageCream: '#F4E7CE',
+            burntOrange: '#C77945',
+            mutedGold: '#D7A45B',
+            warmBeige: '#D8C9B4',
+            darkBg: '#171614',
+            darkSurface: '#201D19',
+            darkCard: '#25201A'
+          },
+          fontFamily: {
+            serifVintage: ['"Playfair Display"', 'Georgia', 'serif'],
+            headingDisplay: ['Cinzel', '"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Instant Theme Execution -->
+  <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-[#FAF5EB] dark:bg-[#171614] text-[#29231D] dark:text-[#F4E7CE] transition-colors duration-300">
+
+  <!-- Sticky Navbar (No top bar) -->
+  <header id="main-navbar" class="sticky-navbar">
+    <div class="site-container h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 shrink-0 group">
+        <div class="w-8 h-8 min-[380px]:w-9 min-[380px]:h-9 sm:w-11 sm:h-11 xl:w-12 xl:h-12 rounded-lg sm:rounded-xl bg-white/80 dark:bg-stone-900/80 p-1 sm:p-1.5 border border-[#D7A45B]/40 shadow-sm flex items-center justify-center overflow-hidden transition group-hover:rotate-3 shrink-0">
+          <img src="assets/images/logo.png" alt="RetroSpin Turntable Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading-display text-sm min-[380px]:text-base sm:text-xl xl:text-2xl font-bold tracking-normal sm:tracking-wider text-[#29231D] dark:text-[#F4E7CE] group-hover:text-[#C77945] transition leading-tight">RetroSpin</span>
+          <span class="text-[7.5px] min-[380px]:text-[8px] sm:text-[9px] xl:text-[10px] tracking-[0.16em] sm:tracking-[0.25em] uppercase text-[#C77945] font-semibold -mt-0.5">Vinyl & Hi-Fi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-2.5 xl:gap-5 2xl:gap-6 text-xs xl:text-sm font-medium">
+        
+        <!-- Home Dropdown -->
+        <div class="nav-dropdown py-2">
+          <button type="button" class="home-dropdown-trigger flex items-center gap-1 text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1 focus:outline-none">
+            <span>Home</span>
+            <svg class="w-3.5 h-3.5 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1 (Vintage Store)</span>
+              <span class="text-[10px] text-[#C77945] font-bold">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2 (Hi-Fi Studio)</span>
+              <span class="text-[10px] text-[#D7A45B] font-bold">Audiophile</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">About</a>
+        <a href="shop.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Shop Vinyl</a>
+        <a href="equipment.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Equipment</a>
+        <a href="gallery.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Gallery</a>
+        <a href="pricing.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Pricing</a>
+        <a href="blog.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Blog</a>
+        <a href="contact.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Contact</a>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-1 sm:gap-2 xl:gap-3 shrink-0">
+        <!-- Search Trigger -->
+        <button type="button" class="search-modal-trigger w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Search Records & Gear (Ctrl+K)">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+
+        <!-- Light / Dark Mode Toggle -->
+        <button type="button" class="theme-toggle-btn w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Toggle Light/Dark Theme">
+          <svg class="theme-icon-moon w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5 text-stone-700 dark:text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5 hidden text-[#D7A45B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" stroke-width="2"/>
+            <path stroke-linecap="round" stroke-width="2" d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.07-7.07l-1.41 1.41M8.34 15.66l-1.41 1.41m0-10.14l1.41 1.41m7.07 7.07l1.41 1.41"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" class="dir-toggle-btn hidden sm:flex h-8 sm:h-9 xl:h-10 px-2.5 xl:px-3.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-800/80 text-stone-800 dark:text-stone-100 hover:border-[#C77945] transition items-center justify-center gap-1.5 shrink-0" title="Toggle Layout Direction (RTL / LTR)">
+          <svg class="w-3.5 h-3.5 xl:w-4 xl:h-4 text-stone-700 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 8H5m4-4L5 8l4 4M3 16h16m-4-4l4 4-4 4"/>
+          </svg>
+          <span class="dir-toggle-label text-xs font-bold text-stone-900 dark:text-white hidden xl:inline">RTL</span>
+        </button>
+
+        <!-- Wishlist / Favorite Modal Trigger -->
+        <button type="button" class="wishlist-modal-trigger relative w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Favorites / Wishlist">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-[#C77945] text-white text-[9px] sm:text-[10px] font-bold rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Cart / Orders Link -->
+        <a href="orders.html" class="relative w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Shopping Bag & Orders">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-[#C77945] text-white text-[9px] sm:text-[10px] font-bold rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">0</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Open Menu">
+          <svg class="w-4 h-4 sm:w-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer & Backdrop -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[#FAF5EB] dark:bg-[#1C1A17] z-50 p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-stone-200 dark:border-stone-800">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="RetroSpin" class="w-10 h-10 object-contain">
+          <span class="font-heading-display font-bold text-lg text-stone-900 dark:text-stone-100">RetroSpin</span>
+        </div>
+        <button id="mobile-menu-close" class="p-2 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 text-xl font-bold">&times;</button>
+      </div>
+
+      <nav class="flex flex-col gap-3 mt-6 text-base font-medium">
+        <div class="space-y-1">
+          <div class="text-[11px] uppercase font-bold text-[#C77945] tracking-wider mb-1">Home Editions</div>
+          <a href="index.html" class="nav-link block py-1.5 ps-2 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Home 1 (Vintage Store)</a>
+          <a href="home2.html" class="nav-link block py-1.5 ps-2 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Home 2 (Hi-Fi Studio)</a>
+        </div>
+        <div class="border-t border-stone-200 dark:border-stone-800 pt-3 space-y-1">
+          <a href="about.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">About Our Story</a>
+          <a href="shop.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Shop Vinyl Catalog</a>
+          <a href="equipment.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Turntables & Hi-Fi</a>
+          <a href="gallery.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Visual Gallery</a>
+          <a href="pricing.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Pricing & Calibration</a>
+          <a href="blog.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">The Vinyl Journal</a>
+          <a href="contact.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Contact & Chennai Lounge</a>
+          <a href="orders.html" class="nav-link block py-1.5 text-[#C77945] font-semibold">Orders & Shopping Bag</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-stone-200 dark:border-stone-800 space-y-4">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-semibold text-stone-700 dark:text-stone-300">Layout Direction</span>
+        <button type="button" class="dir-toggle-btn px-3 py-1.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-800/80 text-stone-800 dark:text-stone-100 flex items-center gap-2 text-xs font-bold" title="Toggle Layout Direction (RTL / LTR)">
+          <svg class="w-3.5 h-3.5 text-stone-700 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 8H5m4-4L5 8l4 4M3 16h16m-4-4l4 4-4 4"/></svg>
+          <span class="dir-toggle-label">RTL</span>
+        </button>
+      </div>
+      <div class="text-xs text-stone-500">
+        <p class="font-semibold text-stone-800 dark:text-stone-200">Chennai Flagship Lounge</p>
+        <p>28 Khader Nawaz Khan Rd, Nungambakkam</p>
+      </div>
+      <a href="orders.html" class="btn-primary w-full py-3 text-xs tracking-wider uppercase text-center block">View Bag & Orders</a>
+    </div>
+  </aside>
+
+  <!-- Modals -->
+  <div id="search-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-start justify-center pt-20 px-4 backdrop-blur-sm">
+    <div class="w-full max-w-2xl bg-white dark:bg-[#201D19] rounded-2xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden">
+      <div class="p-4 border-b border-stone-200 dark:border-stone-800 flex items-center gap-3">
+        <svg class="w-5 h-5 text-[#C77945]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" id="global-search-input" placeholder="Search..." class="w-full bg-transparent text-sm sm:text-base outline-none text-stone-900 dark:text-stone-100 placeholder-stone-400">
+        <button id="search-modal-close" class="text-xs bg-stone-100 dark:bg-stone-800 px-2 py-1 rounded text-stone-500">ESC</button>
+      </div>
+      <div id="search-results-list" class="p-4 max-h-[60vh] overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <div id="wishlist-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+    <div class="w-full max-w-md bg-white dark:bg-[#201D19] rounded-2xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden flex flex-col max-h-[85vh]">
+      <div class="p-4 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between">
+        <h3 class="font-serif-vintage font-bold text-lg text-stone-900 dark:text-stone-100">Saved Wishlist</h3>
+        <button id="wishlist-modal-close" class="text-stone-400 text-xl font-bold">&times;</button>
+      </div>
+      <div id="wishlist-items-list" class="p-4 overflow-y-auto flex-1"></div>
+      <div class="p-4 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/40 flex justify-between items-center">
+        <a href="orders.html" class="btn-primary text-xs px-4 py-2 w-full text-center">Go to Shopping Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="py-8 sm:py-12">
+    <div class="site-container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="flex items-center gap-2 text-xs text-stone-500 mb-8 overflow-x-auto whitespace-nowrap">
+        <a href="index.html" class="hover:text-[#C77945]">Home</a>
+        <span>/</span>
+        <a href="shop.html" id="pd-breadcrumb-category" class="hover:text-[#C77945]">Catalog</a>
+        <span>/</span>
+        <span id="pd-breadcrumb-title" class="text-stone-800 dark:text-stone-200 font-medium truncate">Product Title</span>
+      </nav>
+
+      <!-- Primary Product Showcase Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+        
+        <!-- Left: Image Gallery (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="aspect-square rounded-3xl overflow-hidden bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-md relative group">
+            <img id="pd-primary-image" src="" alt="Product Primary Image" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+          </div>
+
+          <!-- Thumbnails -->
+          <div id="pd-gallery-thumbnails" class="flex items-center gap-3 overflow-x-auto pb-2">
+            <!-- Injected via product-details.js -->
+          </div>
+        </div>
+
+        <!-- Right: Details, Pricing & Purchase Actions (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Badges -->
+          <div id="pd-badge-container" class="flex flex-wrap items-center gap-2">
+            <!-- Badges injected dynamically -->
+          </div>
+
+          <!-- Title & Artist/Brand -->
+          <div>
+            <h1 id="pd-title" class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 leading-tight">
+              Loading Product...
+            </h1>
+            <p id="pd-subtitle" class="text-sm sm:text-base text-stone-500 mt-1 font-medium"></p>
+          </div>
+
+          <!-- Rating -->
+          <div class="flex items-center gap-2 text-xs">
+            <div class="text-amber-500 font-bold">★★★★★</div>
+            <span id="pd-rating" class="font-bold text-stone-800 dark:text-stone-200">5.0</span>
+            <span id="pd-review-count" class="text-stone-400">(0 reviews)</span>
+          </div>
+
+          <!-- Price -->
+          <div class="flex items-baseline gap-3 pt-2 border-t border-stone-100 dark:border-stone-800">
+            <span id="pd-price" class="font-sans text-3xl sm:text-4xl font-bold tracking-tight text-[#C77945]">₹0</span>
+            <span id="pd-original-price" class="font-sans text-base text-stone-400 line-through"></span>
+            <span id="pd-discount-pill" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"></span>
+          </div>
+
+          <!-- Description -->
+          <p id="pd-description" class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed"></p>
+
+          <!-- Quantity, Add to Cart & Wishlist -->
+          <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-stone-100 dark:border-stone-800">
+            
+            <!-- Quantity control -->
+            <div class="flex items-center border border-stone-300 dark:border-stone-700 rounded-xl overflow-hidden bg-white dark:bg-[#201D19]">
+              <button type="button" id="pd-qty-dec" class="px-3.5 py-2.5 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 font-bold">&minus;</button>
+              <input type="number" id="pd-quantity" value="1" min="1" max="10" class="w-12 text-center text-xs font-bold bg-transparent outline-none text-stone-900 dark:text-stone-100">
+              <button type="button" id="pd-qty-inc" class="px-3.5 py-2.5 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 font-bold">&plus;</button>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <button type="button" id="pd-add-to-cart-btn" class="btn-primary px-8 py-3.5 text-xs uppercase tracking-wider font-bold flex-1 sm:flex-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              Add to Bag
+            </button>
+
+            <!-- Wishlist Button -->
+            <button type="button" id="pd-wishlist-btn" class="wishlist-btn p-3 rounded-xl border border-stone-300 dark:border-stone-700 hover:border-[#C77945] text-stone-600 dark:text-stone-300 transition" title="Save to Wishlist">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </button>
+
+          </div>
+
+          <!-- Assurance Guarantee Box -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-stone-100/70 dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-[#C77945] font-bold">✓</span>
+              <span>100% Play-Graded</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#C77945] font-bold">✓</span>
+              <span>Ultrasound Cleaned</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#C77945] font-bold">✓</span>
+              <span>7-Day Return Policy</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Tracklist or Hardware Specs Section -->
+      <section class="mt-16 pt-10 border-t border-stone-200 dark:border-stone-800">
+        <div id="pd-tab-details">
+          <!-- Dynamic Tracklist or Specs table rendered here -->
+        </div>
+      </section>
+
+      <!-- Customer Reviews & Submission -->
+      <section class="mt-16 pt-10 border-t border-stone-200 dark:border-stone-800">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <h3 class="font-serif-vintage text-2xl font-bold text-stone-900 dark:text-stone-100">Customer Verified Reviews</h3>
+            
+            <div id="pd-reviews-list" class="space-y-4">
+              <div class="p-4 rounded-xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-stone-900 dark:text-stone-100">Sameer Kulkarni</span>
+                  <span class="text-xs text-stone-400">2 weeks ago • Verified Collector</span>
+                </div>
+                <div class="text-amber-500 text-xs">★★★★★</div>
+                <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+                  "Exceeded all my expectations. The soundstage and deep bass clarity is sublime. Arrived in Chennai within 24 hours in bulletproof packaging."
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-stone-900 dark:text-stone-100">Pooja Nair</span>
+                  <span class="text-xs text-stone-400">1 month ago • Verified Collector</span>
+                </div>
+                <div class="text-amber-500 text-xs">★★★★★</div>
+                <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+                  "Truly accurate grading. Dead quiet vinyl with zero clicks or pops. Beautiful analog experience from start to finish."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Write Review Form -->
+          <div class="lg:col-span-5 p-6 rounded-3xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm space-y-4">
+            <h4 class="font-serif-vintage font-bold text-lg text-stone-900 dark:text-stone-100">Write an Acoustic Review</h4>
+            <p class="text-xs text-stone-500">Share your listening experience with fellow audio enthusiasts.</p>
+
+            <form id="pd-review-form" class="space-y-3 text-xs">
+              <div>
+                <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Your Name *</label>
+                <input type="text" id="review-author" name="author" required minlength="2" maxlength="50" pattern="^[A-Za-z\s.'-]{2,50}$" title="Reviewer name must be at least 2 characters and contain only letters (no numbers)." placeholder="e.g. Vikram S." class="retro-input text-xs py-2">
+              </div>
+              <div>
+                <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Your Audio Feedback & Thoughts *</label>
+                <textarea id="review-comment" required rows="4" placeholder="How does it sound on your sound system?" class="retro-input text-xs py-2"></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full py-2.5 text-xs font-bold uppercase tracking-wider">
+                Submit Review
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Related Products Grid -->
+      <section class="mt-16 pt-10 border-t border-stone-200 dark:border-stone-800">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-serif-vintage text-2xl font-bold text-stone-900 dark:text-stone-100">Related Recommendations</h3>
+          <a href="shop.html" class="text-xs font-semibold text-[#C77945] hover:underline">View All &rarr;</a>
+        </div>
+        <div id="pd-related-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Populated by product-details.js -->
+        </div>
+      </section>
+
+      <!-- Recently Viewed Section -->
+      <section id="pd-recent-wrapper" class="mt-16 pt-10 border-t border-stone-200 dark:border-stone-800 hidden">
+        <h3 class="font-serif-vintage text-xl font-bold text-stone-900 dark:text-stone-100 mb-6">Recently Viewed</h3>
+        <div id="pd-recent-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Populated by product-details.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Complete Standard Footer -->
+  <footer class="bg-[#201D19] text-[#D8C9B4] border-t border-[#3A3229] pt-16 pb-8">
+    <div class="site-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#3A3229]">
+      
+      <!-- Brand & Mission -->
+      <div class="lg:col-span-2 space-y-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/10 p-1 border border-[#D7A45B]/40 overflow-hidden">
+            <img src="assets/images/logo.png" alt="RetroSpin" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <span class="font-heading-display text-xl font-bold tracking-wider text-white">RetroSpin</span>
+            <span class="block text-[9px] uppercase tracking-[0.25em] text-[#D7A45B]">Vinyl & Hi-Fi Boutique</span>
+          </div>
+        </a>
+        <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+          A dedicated sanctuary for vintage vinyl preservation and high-fidelity sound. Every record is play-graded, ultrasonically cleaned, and shipped in climate-resilient packaging.
+        </p>
+
+        <!-- Social Buttons -->
+        <div class="flex items-center gap-3 pt-2">
+          <!-- WhatsApp with official SVG -->
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Chat on WhatsApp">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.2.3-.778.978-.953 1.179-.176.2-.351.226-.652.075s-1.272-.469-2.423-1.497c-.896-.799-1.501-1.788-1.677-2.089-.176-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.1-.2.05-.376-.025-.526-.075-.15-.677-1.631-.927-2.233-.244-.587-.492-.507-.677-.517l-.577-.01c-.2 0-.527.075-.802.376s-1.053 1.028-1.053 2.508 1.078 2.909 1.229 3.109c.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.634.721.23 1.377.197 1.896.12.578-.087 1.78-.727 2.031-1.429.251-.702.251-1.304.176-1.429-.076-.125-.276-.2-.577-.35zM12 2C6.486 2 2 6.486 2 12c0 1.846.502 3.582 1.377 5.081L2 22l5.06-1.328C8.513 21.524 10.207 22 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.574 0-3.082-.435-4.382-1.258l-.314-.197-3.003.788.802-2.926-.216-.344C4.019 14.73 3.5 13.398 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://instagram.com/retrospin.vinyl" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Follow on Instagram">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- Twitter / X -->
+          <a href="https://x.com/retrospin" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Follow on X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://facebook.com/retrospin.store" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Facebook Page">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.808C10.595 0 9 1.583 9 4.615V8z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Nav -->
+      <div class="space-y-3">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-white">Catalog & Store</h5>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-white transition">Home 1 (Vintage)</a></li>
+          <li><a href="home2.html" class="hover:text-white transition">Home 2 (Hi-Fi Lounge)</a></li>
+          <li><a href="shop.html" class="hover:text-white transition">Shop Vinyl Records</a></li>
+          <li><a href="equipment.html" class="hover:text-white transition">Turntables & Hi-Fi</a></li>
+          <li><a href="gallery.html" class="hover:text-white transition">Visual Gallery</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition">Pricing & Grading Scale</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Support -->
+      <div class="space-y-3">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-white">Customer Support</h5>
+        <ul class="space-y-2 text-xs">
+          <li><a href="orders.html" class="hover:text-white transition">Your Bag & Orders</a></li>
+          <li><a href="pricing.html#shipping" class="hover:text-white transition">Shipping & Delivery Info</a></li>
+          <li><a href="pricing.html#returns" class="hover:text-white transition">Return & Exchange Policy</a></li>
+          <li><a href="contact.html#faqs" class="hover:text-white transition">Frequently Asked Questions</a></li>
+          <li><a href="about.html#sourcing" class="hover:text-white transition">Record Sourcing Standards</a></li>
+          <li><a href="contact.html" class="hover:text-white transition">Help & Inquiries</a></li>
+        </ul>
+      </div>
+
+      <!-- Visit Us in Chennai -->
+      <div class="space-y-3">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-white">Chennai Lounge</h5>
+        <div class="space-y-1.5 text-xs text-stone-400">
+          <p class="text-white font-medium">RetroSpin Flagship Lounge</p>
+          <p>28 Khader Nawaz Khan Road, Nungambakkam</p>
+          <p>Chennai, Tamil Nadu 600006</p>
+          <p class="pt-2"><strong class="text-stone-300">Hours:</strong> 10:00 AM – 9:00 PM</p>
+          <p><strong class="text-stone-300">WhatsApp:</strong> +91 98765 43210</p>
+          <p><strong class="text-stone-300">Email:</strong> contact@retrospin.in</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Centered Copyright -->
+    <div class="site-container pt-8 text-center text-xs text-stone-500">
+      &copy; 2026 RetroSpin Audio & Vinyl Boutique. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/product-details.js"></script>
+</body>
+</html>

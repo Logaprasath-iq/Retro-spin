@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 — Audiophile Studio & Hi-Fi Listening Lounge | RetroSpin</title>
+  <meta name="description" content="Experience master-grade analog fidelity at RetroSpin's premier Hi-Fi Studio & Listening Lounge in Chennai. Vacuum tube amplifiers, reference turntables, and UHQR pressings.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            darkBrown: '#29231D',
+            vintageCream: '#F4E7CE',
+            burntOrange: '#C77945',
+            mutedGold: '#D7A45B',
+            warmBeige: '#D8C9B4',
+            darkBg: '#171614',
+            darkSurface: '#201D19',
+            darkCard: '#25201A'
+          },
+          fontFamily: {
+            serifVintage: ['"Playfair Display"', 'Georgia', 'serif'],
+            headingDisplay: ['Cinzel', '"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Instant Theme Execution -->
+  <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-[#FAF5EB] dark:bg-[#171614] text-[#29231D] dark:text-[#F4E7CE] transition-colors duration-300">
+
+  <!-- Sticky Navbar -->
+  <header id="main-navbar" class="sticky-navbar">
+    <div class="site-container h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 shrink-0 group">
+        <div class="w-8 h-8 min-[380px]:w-9 min-[380px]:h-9 sm:w-11 sm:h-11 xl:w-12 xl:h-12 rounded-lg sm:rounded-xl bg-white/80 dark:bg-stone-900/80 p-1 sm:p-1.5 border border-[#D7A45B]/40 shadow-sm flex items-center justify-center overflow-hidden transition group-hover:rotate-3 shrink-0">
+          <img src="assets/images/logo.png" alt="RetroSpin Turntable Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading-display text-sm min-[380px]:text-base sm:text-xl xl:text-2xl font-bold tracking-normal sm:tracking-wider text-[#29231D] dark:text-[#F4E7CE] group-hover:text-[#C77945] transition leading-tight">RetroSpin</span>
+          <span class="text-[7.5px] min-[380px]:text-[8px] sm:text-[9px] xl:text-[10px] tracking-[0.16em] sm:tracking-[0.25em] uppercase text-[#C77945] font-semibold -mt-0.5">Vinyl & Hi-Fi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-2.5 xl:gap-5 2xl:gap-6 text-xs xl:text-sm font-medium">
+        
+        <!-- Home Dropdown -->
+        <div class="nav-dropdown py-2">
+          <button type="button" class="home-dropdown-trigger flex items-center gap-1 text-[#C77945] dark:text-[#D7A45B] font-semibold transition py-1 focus:outline-none">
+            <span>Home</span>
+            <svg class="w-3.5 h-3.5 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1 (Vintage Store)</span>
+              <span class="text-[10px] text-[#C77945] font-bold">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item text-[#C77945] font-semibold">
+              <span>Home 2 (Hi-Fi Studio)</span>
+              <span class="text-[10px] text-[#D7A45B] font-bold">Audiophile</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">About</a>
+        <a href="shop.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Shop Vinyl</a>
+        <a href="equipment.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Equipment</a>
+        <a href="gallery.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Gallery</a>
+        <a href="pricing.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Pricing</a>
+        <a href="blog.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Blog</a>
+        <a href="contact.html" class="nav-link text-stone-700 dark:text-stone-300 hover:text-[#C77945] dark:hover:text-[#D7A45B] transition py-1">Contact</a>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-1 sm:gap-2 xl:gap-3 shrink-0">
+        <!-- Search Trigger -->
+        <button type="button" class="search-modal-trigger w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Search Records & Gear (Ctrl+K)">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+
+        <!-- Light / Dark Mode Toggle -->
+        <button type="button" class="theme-toggle-btn w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Toggle Light/Dark Theme">
+          <svg class="theme-icon-moon w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5 text-stone-700 dark:text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5 hidden text-[#D7A45B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" stroke-width="2"/>
+            <path stroke-linecap="round" stroke-width="2" d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.07-7.07l-1.41 1.41M8.34 15.66l-1.41 1.41m0-10.14l1.41 1.41m7.07 7.07l1.41 1.41"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" class="dir-toggle-btn hidden sm:flex h-8 sm:h-9 xl:h-10 px-2.5 xl:px-3.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-800/80 text-stone-800 dark:text-stone-100 hover:border-[#C77945] transition items-center justify-center gap-1.5 shrink-0" title="Toggle Layout Direction (RTL / LTR)">
+          <svg class="w-3.5 h-3.5 xl:w-4 xl:h-4 text-stone-700 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 8H5m4-4L5 8l4 4M3 16h16m-4-4l4 4-4 4"/>
+          </svg>
+          <span class="dir-toggle-label text-xs font-bold text-stone-900 dark:text-white hidden xl:inline">RTL</span>
+        </button>
+
+        <!-- Wishlist / Favorite Modal Trigger -->
+        <button type="button" class="wishlist-modal-trigger relative w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Favorites / Wishlist">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-[#C77945] text-white text-[9px] sm:text-[10px] font-bold rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Cart / Orders Link -->
+        <a href="orders.html" class="relative w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-full flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Shopping Bag & Orders">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 xl:w-5 xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-[#C77945] text-white text-[9px] sm:text-[10px] font-bold rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">0</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden w-7 h-7 min-[380px]:w-8 min-[380px]:h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center text-stone-700 dark:text-stone-300 hover:bg-stone-200/60 dark:hover:bg-stone-800 transition shrink-0" title="Open Menu">
+          <svg class="w-4 h-4 sm:w-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[#FAF5EB] dark:bg-[#1C1A17] z-50 p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 border-l border-stone-200 dark:border-stone-800">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="RetroSpin" class="w-10 h-10 object-contain">
+          <span class="font-heading-display font-bold text-lg text-stone-900 dark:text-stone-100">RetroSpin</span>
+        </div>
+        <button id="mobile-menu-close" class="p-2 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 text-xl font-bold">&times;</button>
+      </div>
+
+      <nav class="flex flex-col gap-3 mt-6 text-base font-medium">
+        <div class="space-y-1">
+          <div class="text-[11px] uppercase font-bold text-[#C77945] tracking-wider mb-1">Home Editions</div>
+          <a href="index.html" class="nav-link block py-1.5 ps-2 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Home 1 (Vintage Store)</a>
+          <a href="home2.html" class="nav-link block py-1.5 ps-2 text-[#C77945] font-semibold">Home 2 (Hi-Fi Studio)</a>
+        </div>
+        <div class="border-t border-stone-200 dark:border-stone-800 pt-3 space-y-2">
+          <a href="about.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">About Us</a>
+          <a href="shop.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Shop Vinyl</a>
+          <a href="equipment.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Equipment</a>
+          <a href="gallery.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Gallery</a>
+          <a href="pricing.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Pricing</a>
+          <a href="blog.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Blog & Journal</a>
+          <a href="contact.html" class="nav-link block py-1.5 text-stone-800 dark:text-stone-200 hover:text-[#C77945]">Contact</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-stone-200 dark:border-stone-800 space-y-4">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-semibold text-stone-700 dark:text-stone-300">Layout Direction</span>
+        <button type="button" class="dir-toggle-btn px-3 py-1.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-800/80 text-stone-800 dark:text-stone-100 flex items-center gap-2 text-xs font-bold" title="Toggle Layout Direction (RTL / LTR)">
+          <svg class="w-3.5 h-3.5 text-stone-700 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 8H5m4-4L5 8l4 4M3 16h16m-4-4l4 4-4 4"/></svg>
+          <span class="dir-toggle-label">RTL</span>
+        </button>
+      </div>
+      <div class="text-xs text-stone-500">
+        <p class="font-semibold text-stone-700 dark:text-stone-300">RetroSpin Listening Lounge</p>
+        <p>Nungambakkam, Chennai • Mon - Sun (10 AM - 9 PM)</p>
+      </div>
+      <a href="orders.html" class="btn-primary w-full py-3 text-xs tracking-wider uppercase text-center block">View Bag & Orders</a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-start justify-center pt-20 px-4 backdrop-blur-sm">
+    <div class="w-full max-w-2xl bg-white dark:bg-[#201D19] rounded-2xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden">
+      <div class="p-4 border-b border-stone-200 dark:border-stone-800 flex items-center gap-3">
+        <svg class="w-5 h-5 text-[#C77945]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" id="global-search-input" placeholder="Search albums, artists, genres, turntables, tube amps..." class="w-full bg-transparent text-sm sm:text-base outline-none text-stone-900 dark:text-stone-100 placeholder-stone-400">
+        <button id="search-modal-close" class="text-xs bg-stone-100 dark:bg-stone-800 px-2 py-1 rounded text-stone-500 hover:text-stone-900 dark:hover:text-stone-100">ESC</button>
+      </div>
+      <div id="search-results-list" class="p-4 max-h-[60vh] overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div id="wishlist-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+    <div class="w-full max-w-md bg-white dark:bg-[#201D19] rounded-2xl shadow-2xl border border-stone-200 dark:border-stone-700 overflow-hidden flex flex-col max-h-[85vh]">
+      <div class="p-4 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#C77945]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <h3 class="font-serif-vintage font-bold text-lg text-stone-900 dark:text-stone-100">Saved Wishlist</h3>
+        </div>
+        <button id="wishlist-modal-close" class="text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 text-xl font-bold">&times;</button>
+      </div>
+      <div id="wishlist-items-list" class="p-4 overflow-y-auto flex-1"></div>
+      <div class="p-4 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/40 flex justify-between items-center">
+        <a href="shop.html" class="text-xs font-semibold text-[#C77945] hover:underline">Explore More Vinyl &rarr;</a>
+        <a href="orders.html" class="btn-primary text-xs px-4 py-2">Go to Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (Home 2: Audiophile Sound Studio Edition) -->
+    <section class="relative py-20 lg:py-28 overflow-hidden bg-[#1E1B17] text-[#F4E7CE] border-b border-[#3A3229]">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=1920&q=80" alt="Hi-Fi Studio Background" class="w-full h-full object-cover opacity-20 filter blur-[1px]">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#171614] via-[#1E1B17]/90 to-transparent"></div>
+      </div>
+
+      <div class="site-container relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-gold text-xs font-semibold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-[#D7A45B] animate-pulse"></span>
+              The Audiophile Studio & Listening Suite Edition
+            </div>
+
+            <h1 class="font-serif-vintage text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.12] text-white">
+              Pure Analog Sound. <br>
+              <span class="italic text-[#D7A45B] font-normal underline decoration-[#C77945]">Uncompromised Fidelity.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-stone-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+              Step beyond ordinary audio playback. Home 2 welcomes you into RetroSpin's reference sound chambers in Chennai—where discrete triode tubes, diamond micro-linear styli, and heavy dampening plinths reveal the true soul of master recordings.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#suites" class="btn-gold px-8 py-3.5 text-xs uppercase tracking-wider shadow-xl">
+                Explore Sound Suites
+              </a>
+              <a href="equipment.html" class="btn-secondary text-white border-white/40 hover:border-white px-7 py-3.5 text-xs uppercase tracking-wider">
+                Audiophile Hardware
+              </a>
+            </div>
+
+            <!-- Acoustic Benchmark Badges -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-stone-800 text-center lg:text-left">
+              <div>
+                <div class="font-sans text-lg sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#D7A45B] stat-counter min-h-[2rem] sm:min-h-[2.25rem] flex items-baseline justify-center lg:justify-start" data-target="0.01" data-decimals="2" data-suffix="%">0.00%</div>
+                <div class="text-[10px] sm:text-[11px] text-stone-400 uppercase tracking-wider mt-1">Wow &amp; Flutter Spec</div>
+              </div>
+              <div>
+                <div class="font-sans text-lg sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#C77945] stat-counter min-h-[2rem] sm:min-h-[2.25rem] flex items-baseline justify-center lg:justify-start" data-target="100" data-suffix="%">0%</div>
+                <div class="text-[10px] sm:text-[11px] text-stone-400 uppercase tracking-wider mt-1">Vacuum Tube Stage</div>
+              </div>
+              <div>
+                <div class="font-sans text-lg sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white stat-counter min-h-[2rem] sm:min-h-[2.25rem] flex items-baseline justify-center lg:justify-start" data-target="45" data-suffix=" RPM">0 RPM</div>
+                <div class="text-[10px] sm:text-[11px] text-stone-400 uppercase tracking-wider mt-1">Audiophile Masters</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Studio Graphic Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="rounded-3xl overflow-hidden border-2 border-[#D7A45B]/40 shadow-2xl aspect-[4/3] bg-black group relative">
+              <img src="https://i.pinimg.com/736x/1c/9a/43/1c9a43b06c7d09b8b3bf46072a1ca2dd.jpg" alt="Master Turntable Studio" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+              <div class="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5 p-4 sm:p-5 rounded-2xl bg-black/75 dark:bg-[#171614]/85 backdrop-blur-md border border-[#D7A45B]/40 shadow-2xl space-y-1.5 transition">
+                <span class="inline-block text-[10px] uppercase tracking-widest text-[#D7A45B] font-bold px-2 py-0.5 rounded-md bg-[#D7A45B]/15 border border-[#D7A45B]/30">
+                  Chennai Listening Suite 1
+                </span>
+                <h4 class="font-serif-vintage text-lg sm:text-xl font-bold text-white leading-snug drop-shadow-md">
+                  The Tube &amp; Walnut Master Station
+                </h4>
+                <p class="text-xs text-stone-200 leading-relaxed drop-shadow-sm font-normal">
+                  Decoupled magnetic levitation feet with Ortofon 2M Bronze tracking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Curated Master Listening Suites -->
+    <section id="suites" class="py-16 sm:py-24 border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Acoustic Architecture</span>
+          <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-1">Our Three Signature Sound Suites</h2>
+          <p class="text-sm text-stone-600 dark:text-stone-400 mt-2">Each chamber is voiced with calibrated acoustic damping and dedicated gear synergy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          
+          <!-- Suite 1: Tube Sanctuary -->
+          <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] hover:shadow-lg transition flex flex-col justify-between h-full group">
+            <div class="flex-1 flex flex-col">
+              <div class="relative overflow-hidden rounded-2xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://images.unsplash.com/photo-1668954729109-165b4aea3416?auto=format&fit=crop&w=600&q=80" alt="Vacuum Tube Amplifier Glowing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">Single-Ended Triode</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945] tracking-wider">Suite Alpha</span>
+              <h3 class="font-serif-vintage text-xl font-bold text-stone-900 dark:text-stone-100 mt-1 sm:min-h-[3.5rem] flex items-start">The Vacuum Tube Sanctuary</h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed mt-2 sm:min-h-[4.5rem]">
+                Single-ended triode vacuum tubes driving point-source horn drivers. Voiced specifically for modal jazz, vocal intimacy, and acoustic double-bass harmonic warmth.
+              </p>
+              <div class="mt-4 p-3.5 rounded-xl border border-stone-100 dark:border-stone-800/80 bg-stone-50/80 dark:bg-stone-800/40 text-[11px] text-stone-600 dark:text-stone-300 space-y-1.5 sm:min-h-[5.5rem] flex flex-col justify-center">
+                <div><strong>Core Amp:</strong> Golden Glow Tube Integrated (35W RMS)</div>
+                <div><strong>Turntable:</strong> RetroSpin Artisan Walnut Belt-Drive</div>
+                <div><strong>Featured LP:</strong> John Coltrane — A Love Supreme</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2">
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2.5 text-center block">Reserve Audition Slot</a>
+            </div>
+          </div>
+
+          <!-- Suite 2: Direct-Drive Chamber -->
+          <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#201D19] border-2 border-[#D7A45B] shadow-md hover:shadow-xl transition flex flex-col justify-between h-full group">
+            <div class="flex-1 flex flex-col">
+              <div class="relative overflow-hidden rounded-2xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://images.unsplash.com/photo-1542395118-9d95347995bc?auto=format&fit=crop&w=600&q=80" alt="Quartz Direct Drive Turntable Chamber" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">Flagship Reference</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945] tracking-wider">Suite Beta</span>
+              <h3 class="font-serif-vintage text-xl font-bold text-stone-900 dark:text-stone-100 mt-1 sm:min-h-[3.5rem] flex items-start">The Quartz Direct-Drive Chamber</h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed mt-2 sm:min-h-[4.5rem]">
+                Restored Technics SL-1200MK2 with damped die-cast chassis and high-torque direct drive. Unrivaled timing accuracy for complex progressive rock and orchestral percussion.
+              </p>
+              <div class="mt-4 p-3.5 rounded-xl border border-stone-100 dark:border-stone-800/80 bg-stone-50/80 dark:bg-stone-800/40 text-[11px] text-stone-600 dark:text-stone-300 space-y-1.5 sm:min-h-[5.5rem] flex flex-col justify-center">
+                <div><strong>Core Turntable:</strong> Technics SL-1200MK2 Overhauled</div>
+                <div><strong>Cartridge:</strong> Ortofon 2M Red / Blue MM</div>
+                <div><strong>Featured LP:</strong> Pink Floyd — The Dark Side of the Moon</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2">
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2.5 text-center block">Reserve Audition Slot</a>
+            </div>
+          </div>
+
+          <!-- Suite 3: Head-Fi Lounge -->
+          <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] hover:shadow-lg transition flex flex-col justify-between h-full group">
+            <div class="flex-1 flex flex-col">
+              <div class="relative overflow-hidden rounded-2xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://i.pinimg.com/736x/6d/c0/53/6dc053e8e880f5a75c53bf60331720d9.jpg" alt="Audiophile Headphone Listening Lounge" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">Pure Class-A FET</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945] tracking-wider">Suite Gamma</span>
+              <h3 class="font-serif-vintage text-xl font-bold text-stone-900 dark:text-stone-100 mt-1 sm:min-h-[3.5rem] flex items-start">The Personal Head-Fi Lounge</h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed mt-2 sm:min-h-[4.5rem]">
+                Zero room reflections. Open-back walnut dynamic drivers plugged directly into class-A pure discrete headphone amplifiers for late-night micro-detail inspection.
+              </p>
+              <div class="mt-4 p-3.5 rounded-xl border border-stone-100 dark:border-stone-800/80 bg-stone-50/80 dark:bg-stone-800/40 text-[11px] text-stone-600 dark:text-stone-300 space-y-1.5 sm:min-h-[5.5rem] flex flex-col justify-center">
+                <div><strong>Headphones:</strong> Velvet Studio Open-Back Audiophile</div>
+                <div><strong>Preamp:</strong> Discrete FET RIAA Phono Stage</div>
+                <div><strong>Featured LP:</strong> Miles Davis — Kind of Blue (180g)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2">
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2.5 text-center block">Reserve Audition Slot</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: The 5-Stage Studio Analog Signal Chain -->
+    <section class="py-16 sm:py-24 bg-stone-100/60 dark:bg-[#141210] border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Acoustic Signal Topology</span>
+          <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-1">The 5-Stage Analog Signal Chain</h2>
+          <p class="text-sm text-stone-600 dark:text-stone-400 mt-2">How microscopic groove modulations travel through our discrete reference chain without loss or compression.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+          
+          <!-- Stage 1 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#1E1B17] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3.5">
+                <img src="https://i.pinimg.com/736x/de/3f/da/de3fda1b9b786df19535da33b7a6cb04.jpg" alt="Diamond Stylus Tracking" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md">Stage 01</span>
+              </div>
+              <h4 class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 sm:min-h-[2.75rem] flex items-start">Micro-Linear Stylus</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1.5 sm:min-h-[3.5rem]">
+                Tracks groove micro-indentations with 0.15mm radius, capturing high-frequency harmonics up to 45kHz.
+              </p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-[11px] text-stone-400">
+              <span class="font-medium text-[#C77945]">Tracking VTF</span>
+              <span class="font-semibold text-stone-700 dark:text-stone-300">1.8g ± 0.05g</span>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#1E1B17] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3.5">
+                <img src="https://i.pinimg.com/1200x/51/0e/f6/510ef651b02c5ca11cca59efca15793c.jpg" alt="Tonearm Silver Wiring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md">Stage 02</span>
+              </div>
+              <h4 class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 sm:min-h-[2.75rem] flex items-start">Silver Litz Tonearm Wire</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1.5 sm:min-h-[3.5rem]">
+                99.9999% pure silver monocrystalline conductors eliminate phase distortion on minuscule 0.3mV signals.
+              </p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-[11px] text-stone-400">
+              <span class="font-medium text-[#C77945]">Conductor</span>
+              <span class="font-semibold text-stone-700 dark:text-stone-300">6N Pure Silver</span>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#1E1B17] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3.5">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Permalloy Step Up Transformer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md">Stage 03</span>
+              </div>
+              <h4 class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 sm:min-h-[2.75rem] flex items-start">Step-Up Transformer</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1.5 sm:min-h-[3.5rem]">
+                Dual permalloy mu-metal shielded transformers provide +26dB passive gain with total absence of resistor thermal hiss.
+              </p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-[11px] text-stone-400">
+              <span class="font-medium text-[#C77945]">Passive Gain</span>
+              <span class="font-semibold text-stone-700 dark:text-stone-300">+26dB Mu-Metal</span>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#1E1B17] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3.5">
+                <img src="https://i.pinimg.com/1200x/ac/dc/98/acdc9872f91acb7a6fd18c8515bdd9d4.jpg" alt="Vacuum Tube RIAA Preamp" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md">Stage 04</span>
+              </div>
+              <h4 class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 sm:min-h-[2.75rem] flex items-start">Class-A Tube RIAA Stage</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1.5 sm:min-h-[3.5rem]">
+                Matched 12AX7 and 12AU7 triodes restore analog equalization curves with warm second-order harmonic richness.
+              </p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-[11px] text-stone-400">
+              <span class="font-medium text-[#C77945]">EQ Curve</span>
+              <span class="font-semibold text-stone-700 dark:text-stone-300">RIAA ±0.2dB</span>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#1E1B17] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3.5">
+                <img src="https://i.pinimg.com/1200x/88/44/3d/88443dcd9c74a4f8e839fd82e1b2f6b7.jpg" alt="Horn Monitor Loudspeakers" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md">Stage 05</span>
+              </div>
+              <h4 class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 sm:min-h-[2.75rem] flex items-start">Point-Source Monitors</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1.5 sm:min-h-[3.5rem]">
+                High-efficiency horn drivers and treated pulp cones project effortless dynamic transients directly into the listening room.
+              </p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-[11px] text-stone-400">
+              <span class="font-medium text-[#C77945]">Sensitivity</span>
+              <span class="font-semibold text-stone-700 dark:text-stone-300">96dB @ 1W/1m</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Audiophile Pressing Shootout -->
+    <section class="py-16 sm:py-20 bg-stone-100/70 dark:bg-[#1A1815] border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-5 space-y-4">
+            <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Sound Science</span>
+            <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100">
+              The Pressing Shootout: Which Vinyl Sounds Best?
+            </h2>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+              Not all vinyl records are pressed equal. Understanding the difference between mass commercial reissues and premium audiophile masterings changes how you collect.
+            </p>
+            <div class="pt-2">
+              <a href="shop.html" class="btn-primary text-xs px-6 py-3 uppercase tracking-wider">
+                Shop Auditioned Records
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-3">
+            
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 space-y-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-serif-vintage font-bold text-sm text-stone-900 dark:text-stone-100">45 RPM 2xLP Deluxe Pressings</h4>
+                <span class="text-[10px] font-bold text-[#C77945] uppercase">Ultimate Dynamic Range</span>
+              </div>
+              <p class="text-xs text-stone-500 leading-relaxed">
+                By spreading music across four sides at 45 RPM, the groove travels past the stylus 35% faster. This yields dramatically lower inner-groove distortion, tighter bass transients, and shimmering high-frequency extension.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 space-y-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-serif-vintage font-bold text-sm text-stone-900 dark:text-stone-100">180g Virgin SuperVinyl (Tone Poet / QRP)</h4>
+                <span class="text-[10px] font-bold text-[#D7A45B] uppercase">Zero Floor Noise</span>
+              </div>
+              <p class="text-xs text-stone-500 leading-relaxed">
+                Pressed using non-recycled virgin vinyl pellets in dust-free cleanrooms. Heavy mass eliminates rotational platter slip and provides blacker, quieter acoustic backgrounds between song movements.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 space-y-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-serif-vintage font-bold text-sm text-stone-900 dark:text-stone-100">Abbey Road Half-Speed Mastering</h4>
+                <span class="text-[10px] font-bold text-emerald-600 uppercase">Microscopic Precision</span>
+              </div>
+              <p class="text-xs text-stone-500 leading-relaxed">
+                Lacquer cutting lathe runs at half speed (16 2/3 RPM for 33 1/3 playback), giving the cutting stylus double the electrical headroom to carve intricate wave envelopes without overheating.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Live Hardware Gear Rig -->
+    <section class="py-16 sm:py-20 border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Master Benchmark Components</span>
+            <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-1">Featured Audiophile Equipment</h2>
+          </div>
+          <a href="equipment.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C77945] hover:text-[#B56837]">
+            View Complete Equipment Catalog &rarr;
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="product-card rounded-2xl overflow-hidden flex flex-col justify-between p-4">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3">
+                <img src="https://i.pinimg.com/1200x/bd/14/c1/bd14c163aa6ff4c6dcfe68d7f7b6f43a.jpg" alt="Artisan Walnut Turntable" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full badge-gold">Store Flagship</span>
+                <button type="button" onclick="event.stopPropagation(); toggleWishlist('eq-001')" data-wishlist-id="eq-001" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </button>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">RetroSpin Signature</span>
+              <a href="product-details.html?id=eq-001" class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 hover:text-[#C77945] block truncate mt-0.5">Artisan Walnut Belt-Drive</a>
+              <p class="text-xs text-stone-500 mt-1">Carbon-fiber arm with AT-VM95E cartridge.</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <span class="text-base font-bold text-stone-900 dark:text-stone-100">₹24,999</span>
+              <button onclick="addToCart('eq-001')" class="btn-primary text-xs px-3.5 py-1.5">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card rounded-2xl overflow-hidden flex flex-col justify-between p-4">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3">
+                <img src="https://i.pinimg.com/1200x/a9/61/10/a96110f1b2954ea2cf6a617ac85a2ca1.jpg" alt="Tube Amp" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full badge-gold">Warm Tube Sound</span>
+                <button type="button" onclick="event.stopPropagation(); toggleWishlist('eq-003')" data-wishlist-id="eq-003" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </button>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">RetroSpin Acoustics</span>
+              <a href="product-details.html?id=eq-003" class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 hover:text-[#C77945] block truncate mt-0.5">Golden Glow Tube Amp 35W</a>
+              <p class="text-xs text-stone-500 mt-1">Dual 12AX7 preamp with discrete Class A/B stage.</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <span class="text-base font-bold text-stone-900 dark:text-stone-100">₹38,999</span>
+              <button onclick="addToCart('eq-003')" class="btn-primary text-xs px-3.5 py-1.5">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card rounded-2xl overflow-hidden flex flex-col justify-between p-4">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3">
+                <img src="https://i.pinimg.com/736x/6d/16/78/6d16783fbfd3c9e04e52e841b2e37785.jpg" alt="Speakers" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full badge-gold">Audiophile Grade</span>
+                <button type="button" onclick="event.stopPropagation(); toggleWishlist('eq-004')" data-wishlist-id="eq-004" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </button>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">Vintage Acoustic Labs</span>
+              <a href="product-details.html?id=eq-004" class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 hover:text-[#C77945] block truncate mt-0.5">Heritage Monitor Bookshelf Pair</a>
+              <p class="text-xs text-stone-500 mt-1">6.5" paper pulp woofer & silk dome tweeter.</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <span class="text-base font-bold text-stone-900 dark:text-stone-100">₹29,999</span>
+              <button onclick="addToCart('eq-004')" class="btn-primary text-xs px-3.5 py-1.5">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card rounded-2xl overflow-hidden flex flex-col justify-between p-4">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10] bg-stone-100 dark:bg-stone-800 mb-3">
+                <img src="https://i.pinimg.com/736x/18/24/62/1824623af0e834febe2bcb11cdf397d1.jpg" alt="Headphones" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full badge-gold">Open-Back</span>
+                <button type="button" onclick="event.stopPropagation(); toggleWishlist('eq-005')" data-wishlist-id="eq-005" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </button>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">RetroSpin Reference</span>
+              <a href="product-details.html?id=eq-005" class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 hover:text-[#C77945] block truncate mt-0.5">Velvet Studio Audiophile Phones</a>
+              <p class="text-xs text-stone-500 mt-1">50mm dynamic beryllium driver with walnut cups.</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <span class="text-base font-bold text-stone-900 dark:text-stone-100">₹16,999</span>
+              <button onclick="addToCart('eq-005')" class="btn-primary text-xs px-3.5 py-1.5">Add to Bag</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Live Listening Sessions Calendar in Chennai -->
+    <section class="py-16 sm:py-20 bg-stone-100/70 dark:bg-[#1A1815] border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Community Gatherings</span>
+          <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-1">Live Album Listening Sessions</h2>
+          <p class="text-sm text-stone-600 dark:text-stone-400 mt-2">Held every weekend at our Nungambakkam listening studio in Chennai.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Session 1 -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <span class="text-xs font-bold text-[#C77945] uppercase tracking-wider">Saturday • 6:00 PM</span>
+              <h4 class="font-serif-vintage font-bold text-lg text-stone-900 dark:text-stone-100 mt-2">Pink Floyd: The Dark Side of the Moon (Original UK Master)</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-2">
+                Auditioned in total ambient blackout on our reference tube monoblocks with McIntosh pre-amplification. Followed by analog production Q&A.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800/80">
+              <a href="#audition-booking" class="btn-secondary text-xs px-4 py-2 block text-center w-full">Reserve Free Seat</a>
+            </div>
+          </div>
+
+          <!-- Session 2 -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <span class="text-xs font-bold text-[#C77945] uppercase tracking-wider">Sunday • 11:30 AM</span>
+              <h4 class="font-serif-vintage font-bold text-lg text-stone-900 dark:text-stone-100 mt-2">Miles Davis & John Coltrane: 1950s Blue Note Deep Dive</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-2">
+                Mono playback through single-ended triodes with freshly ground filter coffee. Comparing original mono deep-groove pressings with modern Tone Poet cuts.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800/80">
+              <a href="#audition-booking" class="btn-secondary text-xs px-4 py-2 block text-center w-full">Reserve Free Seat</a>
+            </div>
+          </div>
+
+          <!-- Session 3 -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] transition flex flex-col justify-between h-full group">
+            <div>
+              <span class="text-xs font-bold text-[#C77945] uppercase tracking-wider">Next Wednesday • 7:00 PM</span>
+              <h4 class="font-serif-vintage font-bold text-lg text-stone-900 dark:text-stone-100 mt-2">Turntable Setup Masterclass & Cartridge Calibration</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-2">
+                Bring your own turntable or learn on ours. Hands-on clinic on anti-skate setting, tonearm azimuth alignment, and digital VTF calibration.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800/80">
+              <a href="#audition-booking" class="btn-secondary text-xs px-4 py-2 block text-center w-full">Reserve Free Seat</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Reference Masterpressings Audiophile Vault -->
+    <section class="py-16 sm:py-24 border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Chennai Studio Library</span>
+            <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-1">Audiophile Masterpressings Vault</h2>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">First-pressings, UHQR clarity vinyl, and AAA analog master transfers ready for private auditioning.</p>
+          </div>
+          <a href="shop.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C77945] hover:text-[#B56837]">
+            Browse Entire Vinyl Catalog &rarr;
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Master LP 1 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] hover:shadow-lg transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-square bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://i.pinimg.com/736x/b9/68/d9/b968d931d16fc5e2e8f2fd1a46fc3909.jpg" alt="Steely Dan Aja UHQR" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2.5 left-2.5 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">UHQR 200g Clarity</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">Analogue Productions</span>
+              <h4 class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 mt-1 truncate">Steely Dan — Aja</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1">
+                Cut by Bernie Grundman directly from original 30 IPS master tapes. Flat-profile pressing with zero lead-in rumble.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-stone-100 dark:border-stone-800 text-[11px] text-stone-600 dark:text-stone-300 space-y-1">
+              <div><strong>Mastering:</strong> Bernie Grundman AAA</div>
+              <div><strong>Pressing Plant:</strong> QRP Cleanroom, Salina</div>
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2 text-center mt-2.5 block">Queue in Suite</a>
+            </div>
+          </div>
+
+          <!-- Master LP 2 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] hover:shadow-lg transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-square bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://i.pinimg.com/736x/81/96/3d/81963d00e3c5546eb0b07014a475cf66.jpg" alt="Miles Davis Kind of Blue One Step" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2.5 left-2.5 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">MoFi UltraDisc One-Step</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">Mobile Fidelity Lab</span>
+              <h4 class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 mt-1 truncate">Miles Davis — Kind of Blue</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1">
+                Direct-from-lacquer plating bypassing the father/mother generation. Pristine acoustic brass decay.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-stone-100 dark:border-stone-800 text-[11px] text-stone-600 dark:text-stone-300 space-y-1">
+              <div><strong>Mastering:</strong> Krieg Wunderlich AAA</div>
+              <div><strong>Speed / Vinyl:</strong> 45 RPM 2xLP (180g)</div>
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2 text-center mt-2.5 block">Queue in Suite</a>
+            </div>
+          </div>
+
+          <!-- Master LP 3 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] hover:shadow-lg transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-square bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80" alt="John Coltrane Blue Train Tone Poet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2.5 left-2.5 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">Tone Poet Series</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">Blue Note Records</span>
+              <h4 class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 mt-1 truncate">John Coltrane — Blue Train</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1">
+                All-analog mastering by Kevin Gray at Cohearent Audio. Superb dynamic snap on Paul Chambers' upright bass.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-stone-100 dark:border-stone-800 text-[11px] text-stone-600 dark:text-stone-300 space-y-1">
+              <div><strong>Mastering:</strong> Kevin Gray All-Analog</div>
+              <div><strong>Gatefold:</strong> Stoughton Deluxe Tip-On</div>
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2 text-center mt-2.5 block">Queue in Suite</a>
+            </div>
+          </div>
+
+          <!-- Master LP 4 -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm hover:border-[#D7A45B] hover:shadow-lg transition flex flex-col justify-between h-full group">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-square bg-stone-100 dark:bg-stone-800 mb-4">
+                <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=600&q=80" alt="Pink Floyd Dark Side of the Moon Harvest" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="badge-gold absolute top-2.5 left-2.5 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">1973 UK 1st Press</span>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-[#C77945]">Harvest Records UK</span>
+              <h4 class="font-serif-vintage font-bold text-base text-stone-900 dark:text-stone-100 mt-1 truncate">Pink Floyd — DSOTM (A2/B2)</h4>
+              <p class="text-xs text-stone-500 leading-relaxed mt-1">
+                The mythic solid blue triangle original UK master. Massive stereophonic soundstage recorded at Abbey Road Studios.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-stone-100 dark:border-stone-800 text-[11px] text-stone-600 dark:text-stone-300 space-y-1">
+              <div><strong>Stamper Matrix:</strong> SHVL 804 A-2 / B-2</div>
+              <div><strong>Condition:</strong> Near Mint (NM) Play-Graded</div>
+              <a href="#audition-booking" class="btn-primary text-xs w-full py-2 text-center mt-2.5 block">Queue in Suite</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Interactive Private Studio Audition Booking Console -->
+    <section id="audition-booking" class="py-16 sm:py-24 bg-stone-100/70 dark:bg-[#141210] border-b border-stone-200/80 dark:border-stone-800">
+      <div class="site-container">
+        <div class="max-w-4xl mx-auto bg-white dark:bg-[#1E1B17] rounded-3xl border border-stone-200 dark:border-stone-800 p-8 sm:p-12 shadow-xl">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs uppercase tracking-widest font-bold text-[#C77945]">Private Audition Chamber</span>
+            <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-1">Book Your Reference Audition Session</h2>
+            <p class="text-sm text-stone-600 dark:text-stone-400 mt-2">Reserve 60 minutes of uninterrupted private listening in our acoustically treated chambers in Chennai. Complimentary single-origin filter coffee included.</p>
+          </div>
+
+          <form id="audition-booking-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Suite Selector -->
+              <div>
+                <label for="audition-suite" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Select Sound Suite</label>
+                <select id="audition-suite" class="retro-input" required>
+                  <option value="alpha">Suite Alpha — The Vacuum Tube Sanctuary (Triode Tubes)</option>
+                  <option value="beta">Suite Beta — The Quartz Direct-Drive Chamber (Technics SL-1200)</option>
+                  <option value="gamma">Suite Gamma — The Personal Head-Fi Lounge (Open-Back)</option>
+                </select>
+              </div>
+
+              <!-- Time Slot Selector -->
+              <div>
+                <label for="audition-slot" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Select Audition Session</label>
+                <select id="audition-slot" class="retro-input" required>
+                  <option value="morning">Morning Acoustic Session (11:00 AM – 12:00 PM)</option>
+                  <option value="afternoon">Afternoon Reference Session (3:30 PM – 4:30 PM)</option>
+                  <option value="evening">Twilight Tube Glow Session (6:30 PM – 7:30 PM)</option>
+                  <option value="weekend">Saturday Night Audiophile Special (8:00 PM – 9:00 PM)</option>
+                </select>
+              </div>
+
+              <!-- Name -->
+              <div>
+                <label for="audition-name" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Your Full Name</label>
+                <input type="text" id="audition-name" placeholder="e.g. Vikram Sundaram" class="retro-input" required>
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label for="audition-phone" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Phone Number</label>
+                <input type="tel" id="audition-phone" placeholder="e.g. 9876543210" class="retro-input" required>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="audition-email" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Email Address</label>
+                <input type="email" id="audition-email" placeholder="e.g. vikram@example.com" class="retro-input" required>
+              </div>
+
+              <!-- Preferred Album / Artist -->
+              <div>
+                <label for="audition-album" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Preferred LP / Artist to Audition</label>
+                <input type="text" id="audition-album" placeholder="e.g. Miles Davis - Kind of Blue or Bring My Own" class="retro-input">
+              </div>
+
+            </div>
+
+            <!-- Notes -->
+            <div>
+              <label for="audition-notes" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Acoustic Preferences / Gear Inquiries (Optional)</label>
+              <textarea id="audition-notes" rows="3" placeholder="Tell us about the speakers, tubes, or cartridges you'd like to test during your visit..." class="retro-input"></textarea>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-xs text-stone-500">
+                <span class="text-[#C77945] font-bold">✓ Zero Cost Reservation:</span> Private studio sessions are complimentary for collectors and audio enthusiasts.
+              </div>
+              <button type="submit" class="btn-gold px-8 py-3.5 text-xs uppercase tracking-wider shadow-lg shrink-0 w-full sm:w-auto">
+                Confirm Studio Reservation
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Chennai Flagship Studio Visit CTA -->
+    <section class="py-16 bg-[#29231D] text-[#F4E7CE]">
+      <div class="site-container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-3 text-center lg:text-left">
+            <span class="text-xs uppercase tracking-widest font-bold text-[#D7A45B]">Chennai Flagship Lounge</span>
+            <h3 class="font-serif-vintage text-3xl font-bold text-white">Audition Masterpressings Before You Take Them Home</h3>
+            <p class="text-xs sm:text-sm text-stone-300 max-w-xl">
+              28 Khader Nawaz Khan Road, Nungambakkam, Chennai. Open daily from 10:00 AM to 9:00 PM. WhatsApp us at +91 98765 43210 for private room reservations.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex justify-center lg:justify-end gap-3">
+            <a href="contact.html" class="btn-gold px-7 py-3.5 text-xs uppercase tracking-wider">Book a Session</a>
+            <a href="shop.html" class="btn-secondary text-white border-white/40 hover:border-white px-6 py-3.5 text-xs uppercase tracking-wider">Shop Vinyl</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Standard Footer -->
+  <footer class="bg-[#201D19] text-[#D8C9B4] border-t border-[#3A3229] pt-16 pb-8">
+    <div class="site-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#3A3229]">
+      <div class="lg:col-span-2 space-y-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/10 p-1 border border-[#D7A45B]/40 overflow-hidden">
+            <img src="assets/images/logo.png" alt="RetroSpin" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <span class="font-heading-display text-xl font-bold tracking-wider text-white">RetroSpin</span>
+            <span class="block text-[9px] uppercase tracking-[0.25em] text-[#D7A45B]">Vinyl & Hi-Fi Boutique</span>
+          </div>
+        </a>
+        <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+          A dedicated sanctuary for vintage vinyl preservation and high-fidelity sound. Every record is play-graded, ultrasonically cleaned, and shipped in climate-resilient packaging.
+        </p>
+
+        <!-- Social Buttons with correct WhatsApp icon -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="WhatsApp">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.2.3-.778.978-.953 1.179-.176.2-.351.226-.652.075s-1.272-.469-2.423-1.497c-.896-.799-1.501-1.788-1.677-2.089-.176-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.1-.2.05-.376-.025-.526-.075-.15-.677-1.631-.927-2.233-.244-.587-.492-.507-.677-.517l-.577-.01c-.2 0-.527.075-.802.376s-1.053 1.028-1.053 2.508 1.078 2.909 1.229 3.109c.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.634.721.23 1.377.197 1.896.12.578-.087 1.78-.727 2.031-1.429.251-.702.251-1.304.176-1.429-.076-.125-.276-.2-.577-.35zM12 2C6.486 2 2 6.486 2 12c0 1.846.502 3.582 1.377 5.081L2 22l5.06-1.328C8.513 21.524 10.207 22 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.574 0-3.082-.435-4.382-1.258l-.314-.197-3.003.788.802-2.926-.216-.344C4.019 14.73 3.5 13.398 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/></svg>
+          </a>
+          <a href="https://instagram.com/retrospin.vinyl" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Instagram">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://x.com/retrospin" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://facebook.com/retrospin.store" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.808C10.595 0 9 1.583 9 4.615V8z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-white">Catalog & Store</h5>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-white transition">Home 1 (Vintage)</a></li>
+          <li><a href="home2.html" class="text-[#D7A45B] font-semibold">Home 2 (Hi-Fi Lounge)</a></li>
+          <li><a href="shop.html" class="hover:text-white transition">Shop Vinyl Records</a></li>
+          <li><a href="equipment.html" class="hover:text-white transition">Turntables & Hi-Fi</a></li>
+          <li><a href="gallery.html" class="hover:text-white transition">Visual Gallery</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition">Pricing & Grading Scale</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-white">Customer Support</h5>
+        <ul class="space-y-2 text-xs">
+          <li><a href="orders.html" class="hover:text-white transition">Your Bag & Orders</a></li>
+          <li><a href="pricing.html#shipping" class="hover:text-white transition">Shipping & Delivery Info</a></li>
+          <li><a href="pricing.html#returns" class="hover:text-white transition">Return & Exchange Policy</a></li>
+          <li><a href="contact.html#faqs" class="hover:text-white transition">Frequently Asked Questions</a></li>
+          <li><a href="about.html#sourcing" class="hover:text-white transition">Record Sourcing Standards</a></li>
+          <li><a href="contact.html" class="hover:text-white transition">Help & Inquiries</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h5 class="text-xs font-bold uppercase tracking-wider text-white">Chennai Lounge</h5>
+        <div class="space-y-1.5 text-xs text-stone-400">
+          <p class="text-white font-medium">RetroSpin Flagship Lounge</p>
+          <p>28 Khader Nawaz Khan Road, Nungambakkam</p>
+          <p>Chennai, Tamil Nadu 600006</p>
+          <p class="pt-2"><strong class="text-stone-300">Hours:</strong> 10:00 AM – 9:00 PM</p>
+          <p><strong class="text-stone-300">WhatsApp:</strong> +91 98765 43210</p>
+          <p><strong class="text-stone-300">Email:</strong> contact@retrospin.in</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Centered Copyright -->
+    <div class="site-container pt-8 text-center text-xs text-stone-500">
+      &copy; 2026 RetroSpin Audio & Vinyl Boutique. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
