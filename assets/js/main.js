@@ -52,7 +52,10 @@ const ValidationRules = {
     const trimmed = name.trim();
     // Must be at least 2 characters, only letters, spaces, hyphens, periods, apostrophes, NO NUMBERS
     if (trimmed.length < 2 || trimmed.length > 60) return false;
-    return /^[A-Za-z\s.'-]{2,60}$/.test(trimmed) && !/\d/.test(trimmed);
+    if (/\d/.test(trimmed)) return false;
+    const letterCount = (trimmed.match(/[A-Za-z]/g) || []).length;
+    if (letterCount < 2) return false;
+    return /^[A-Za-z\s.'-]{2,60}$/.test(trimmed);
   },
 
   isValidEmail(email) {
@@ -69,6 +72,23 @@ const ValidationRules = {
     if (/[a-zA-Z]/.test(trimmed)) return false;
     const digitsOnly = trimmed.replace(/\D/g, "");
     return digitsOnly.length >= 10 && digitsOnly.length <= 15;
+  },
+
+  isValidCityOrState(val) {
+    if (!val || typeof val !== "string") return false;
+    const trimmed = val.trim();
+    if (trimmed.length < 2 || trimmed.length > 50) return false;
+    if (/\d/.test(trimmed)) return false;
+    const letterCount = (trimmed.match(/[A-Za-z]/g) || []).length;
+    if (letterCount < 2) return false;
+    return /^[A-Za-z\s.'-]{2,50}$/.test(trimmed);
+  },
+
+  isValidPincode(pin) {
+    if (!pin || typeof pin !== "string") return false;
+    const trimmed = pin.trim();
+    if (/[a-zA-Z]/.test(trimmed)) return false;
+    return /^[0-9]{6}$/.test(trimmed);
   }
 };
 window.ValidationRules = ValidationRules;
@@ -78,7 +98,7 @@ window.ValidationRules = ValidationRules;
 // ------------------------------------
 function setupFormFieldGuards() {
   // 1. Phone fields: Prevent typing or pasting alphabets
-  const phoneInputs = document.querySelectorAll("input[type='tel'], input#contact-phone, input#cust-phone, input#customer-phone");
+  const phoneInputs = document.querySelectorAll("input[type='tel'], input#contact-phone, input#cust-phone, input#customer-phone, input#audition-phone");
   phoneInputs.forEach(input => {
     input.addEventListener("input", (e) => {
       const original = e.target.value;
@@ -89,8 +109,8 @@ function setupFormFieldGuards() {
     });
   });
 
-  // 2. Name fields: Prevent typing or pasting numbers
-  const nameInputs = document.querySelectorAll("input#contact-name, input#cust-name, input#customer-name, input#review-author");
+  // 2. Name fields: Prevent typing or pasting numbers, require alphabets
+  const nameInputs = document.querySelectorAll("input#contact-name, input#cust-name, input#customer-name, input#review-author, input#audition-name, input[name='audition-name']");
   nameInputs.forEach(input => {
     input.addEventListener("input", (e) => {
       const original = e.target.value;
@@ -101,7 +121,31 @@ function setupFormFieldGuards() {
     });
   });
 
-  // 3. Email fields: Clean trailing spaces on blur
+  // 3. City & State fields: Prevent typing or pasting numbers
+  const cityStateInputs = document.querySelectorAll("input#cust-city, input#cust-state, input[name='customer-city'], input[name='customer-state'], input[name='city'], input[name='state']");
+  cityStateInputs.forEach(input => {
+    input.addEventListener("input", (e) => {
+      const original = e.target.value;
+      const sanitized = original.replace(/[0-9]/g, "");
+      if (original !== sanitized) {
+        e.target.value = sanitized;
+      }
+    });
+  });
+
+  // 4. PIN Code fields: Prevent typing or pasting alphabets / special characters, cap at 6 digits
+  const pinInputs = document.querySelectorAll("input#cust-pincode, input[name='customer-pincode'], input[name='pincode'], input#pincode");
+  pinInputs.forEach(input => {
+    input.addEventListener("input", (e) => {
+      const original = e.target.value;
+      const sanitized = original.replace(/\D/g, "").slice(0, 6);
+      if (original !== sanitized) {
+        e.target.value = sanitized;
+      }
+    });
+  });
+
+  // 5. Email fields: Clean trailing spaces on blur
   const emailInputs = document.querySelectorAll("input[type='email']");
   emailInputs.forEach(input => {
     input.addEventListener("blur", (e) => {
@@ -532,7 +576,7 @@ function setupAuditionBookingForm() {
     const nameInput = form.querySelector("#audition-name");
     const emailInput = form.querySelector("#audition-email");
     const phoneInput = form.querySelector("#audition-phone");
-    const suiteSelect = form.querySelector("#audition-suite");
+    const suiteSelect = form.querySelector("#audition-suite") || form.querySelector("#audition-slot");
 
     const name = nameInput?.value.trim() || "";
     const email = emailInput?.value.trim() || "";
@@ -552,7 +596,7 @@ function setupAuditionBookingForm() {
     }
 
     if (!ValidationRules.isValidPhone(phone)) {
-      showNotification("Please enter a valid phone number (10 digits, numbers only).", "error");
+      showNotification("Please enter a valid phone number (10 to 15 digits, numbers only).", "error");
       phoneInput?.focus();
       return;
     }

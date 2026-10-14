@@ -43,7 +43,7 @@
 <body class="bg-[#FAF5EB] dark:bg-[#171614] text-[#29231D] dark:text-[#F4E7CE] transition-colors duration-300">
 
   <!-- Sticky Navbar -->
-  <header id="main-navbar" class="sticky-navbar">
+  <header id="main-navbar" class="sticky-navbar sticky top-0 z-50">
     <div class="site-container h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-4">
       
       <!-- Brand Logo -->
@@ -820,20 +820,20 @@
 
               <!-- Name -->
               <div>
-                <label for="audition-name" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Your Full Name</label>
-                <input type="text" id="audition-name" placeholder="e.g. Vikram Sundaram" class="retro-input" required>
+                <label for="audition-name" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Your Full Name *</label>
+                <input type="text" id="audition-name" name="audition-name" required minlength="2" maxlength="50" pattern="^[A-Za-z\s.'-]{2,50}$" title="Full name must be at least 2 characters and contain only letters (no numbers)." placeholder="e.g. Vikram Sundaram" class="retro-input">
               </div>
 
               <!-- Phone -->
               <div>
-                <label for="audition-phone" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Phone Number</label>
-                <input type="tel" id="audition-phone" placeholder="e.g. 9876543210" class="retro-input" required>
+                <label for="audition-phone" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Phone Number *</label>
+                <input type="tel" id="audition-phone" name="audition-phone" required inputmode="numeric" maxlength="15" pattern="^(\+?[0-9\s-]{10,15})$" title="Phone number must contain 10 to 15 digits (numbers only, no alphabets)." placeholder="e.g. 9876543210" class="retro-input">
               </div>
 
               <!-- Email -->
               <div>
-                <label for="audition-email" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Email Address</label>
-                <input type="email" id="audition-email" placeholder="e.g. vikram@example.com" class="retro-input" required>
+                <label for="audition-email" class="block text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 mb-2">Email Address *</label>
+                <input type="email" id="audition-email" name="audition-email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address with a domain (e.g. vikram@example.com)." placeholder="e.g. vikram@example.com" class="retro-input">
               </div>
 
               <!-- Preferred Album / Artist -->

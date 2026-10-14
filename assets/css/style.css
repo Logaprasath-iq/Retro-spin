@@ -50,13 +50,11 @@ html {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
-  max-width: 100vw;
+  overflow-x: clip;
 }
 
 body {
-  overflow-x: hidden;
-  max-width: 100vw;
+  overflow-x: clip;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -106,9 +104,10 @@ body {
 
 /* Sticky Header Enhancement */
 .sticky-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
   background-color: var(--header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -119,6 +118,51 @@ body {
 .sticky-navbar.scrolled {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
   border-bottom-color: var(--color-muted-gold);
+}
+
+/* Equipment Category Filter Tabs */
+.eq-cat-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.eq-cat-tab:hover:not(.is-active):not(.active) {
+  border-color: #C77945;
+  color: #C77945;
+  background-color: rgba(199, 121, 69, 0.08);
+}
+
+.dark .eq-cat-tab:hover:not(.is-active):not(.active) {
+  border-color: #D7A45B;
+  color: #D7A45B;
+  background-color: rgba(215, 164, 91, 0.12);
+}
+
+.eq-cat-tab.is-active,
+.eq-cat-tab.active {
+  background-color: #C77945 !important;
+  color: #FFFFFF !important;
+  border-color: #C77945 !important;
+  box-shadow: 0 4px 14px rgba(199, 121, 69, 0.35);
+}
+
+.dark .eq-cat-tab.is-active,
+.dark .eq-cat-tab.active {
+  background-color: #C77945 !important;
+  color: #FFFFFF !important;
+  border-color: #C77945 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
 
 /* Badge & Tag Styling — Ultra-Clear & Visible in Both Light & Dark Modes */

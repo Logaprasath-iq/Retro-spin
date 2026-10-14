@@ -43,7 +43,7 @@
 <body class="bg-[#FAF5EB] dark:bg-[#171614] text-[#29231D] dark:text-[#F4E7CE] transition-colors duration-300">
 
   <!-- Sticky Navbar (No top bar) -->
-  <header id="main-navbar" class="sticky-navbar">
+  <header id="main-navbar" class="sticky-navbar sticky top-0 z-50">
     <div class="site-container h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-4">
       
       <!-- Brand Logo -->
@@ -398,15 +398,15 @@
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-2">
                   <div>
                     <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">City *</label>
-                    <input type="text" id="cust-city" name="customer-city" required minlength="2" pattern="^[A-Za-z\s.'-]{2,40}$" placeholder="Chennai" class="retro-input text-xs">
+                    <input type="text" id="cust-city" name="customer-city" required minlength="2" maxlength="40" pattern="^[A-Za-z\s.'-]{2,40}$" title="City must contain only letters (at least 2 characters, no numbers)." placeholder="Chennai" class="retro-input text-xs">
                   </div>
                   <div>
                     <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">State *</label>
-                    <input type="text" id="cust-state" name="customer-state" required minlength="2" pattern="^[A-Za-z\s.'-]{2,40}$" placeholder="Tamil Nadu" class="retro-input text-xs">
+                    <input type="text" id="cust-state" name="customer-state" required minlength="2" maxlength="40" pattern="^[A-Za-z\s.'-]{2,40}$" title="State must contain only letters (at least 2 characters, no numbers)." placeholder="Tamil Nadu" class="retro-input text-xs">
                   </div>
                   <div>
                     <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">PIN Code *</label>
-                    <input type="text" id="cust-pincode" name="customer-pincode" required inputmode="numeric" maxlength="6" pattern="^[0-9]{6}$" title="PIN code must be a 6-digit number." placeholder="600006" class="retro-input text-xs">
+                    <input type="text" id="cust-pincode" name="customer-pincode" required inputmode="numeric" maxlength="6" pattern="^[0-9]{6}$" title="PIN code must be exactly 6 digits (numbers only, no alphabets)." placeholder="600006" class="retro-input text-xs">
                   </div>
                 </div>
 

@@ -43,7 +43,7 @@
 <body class="bg-[#FAF5EB] dark:bg-[#171614] text-[#29231D] dark:text-[#F4E7CE] transition-colors duration-300">
 
   <!-- Sticky Navbar (No top bar) -->
-  <header id="main-navbar" class="sticky-navbar">
+  <header id="main-navbar" class="sticky-navbar sticky top-0 z-50">
     <div class="site-container h-16 sm:h-20 flex items-center justify-between gap-1 sm:gap-4">
       
       <!-- Brand Logo -->
@@ -259,11 +259,12 @@
           
           <div class="flex flex-wrap items-center justify-between gap-4">
             <div class="flex flex-wrap gap-2">
-              <button type="button" class="eq-cat-tab active px-4 py-2 rounded-xl text-xs font-bold bg-[#C77945] text-white transition shadow-sm" data-cat="all">All Hardware (12)</button>
-              <button type="button" class="eq-cat-tab px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-[#201D19] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition border border-stone-200 dark:border-stone-700" data-cat="turntable">Turntables & Decks</button>
-              <button type="button" class="eq-cat-tab px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-[#201D19] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition border border-stone-200 dark:border-stone-700" data-cat="amplifier">Vacuum Tube Amplifiers</button>
-              <button type="button" class="eq-cat-tab px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-[#201D19] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition border border-stone-200 dark:border-stone-700" data-cat="speaker">Acoustic Speakers</button>
-              <button type="button" class="eq-cat-tab px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-[#201D19] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition border border-stone-200 dark:border-stone-700" data-cat="accessories">Care & Accessories</button>
+              <button type="button" class="eq-cat-tab is-active" data-cat="all">All Hardware (12)</button>
+              <button type="button" class="eq-cat-tab" data-cat="turntable">Turntables & Decks</button>
+              <button type="button" class="eq-cat-tab" data-cat="amplifier">Vacuum Tube Amplifiers</button>
+              <button type="button" class="eq-cat-tab" data-cat="speaker">Acoustic Speakers</button>
+              <button type="button" class="eq-cat-tab" data-cat="headphones">Audiophile Headphones</button>
+              <button type="button" class="eq-cat-tab" data-cat="accessories">Care & Accessories</button>
             </div>
 
             <!-- Sorter -->
@@ -512,30 +513,46 @@
 
       tabs.forEach(tab => {
         tab.addEventListener("click", () => {
-          tabs.forEach(t => {
-            t.classList.remove("bg-[#C77945]", "text-white");
-            t.classList.add("bg-white", "dark:bg-[#201D19]", "text-stone-700", "dark:text-stone-300");
-          });
-          tab.classList.remove("bg-white", "dark:bg-[#201D19]", "text-stone-700", "dark:text-stone-300");
-          tab.classList.add("bg-[#C77945]", "text-white");
+          tabs.forEach(t => t.classList.remove("is-active", "active"));
+          tab.classList.add("is-active");
           activeCategory = tab.getAttribute("data-cat");
           renderEquipment();
         });
       });
+
+      // Handle category URL parameters if arriving from links
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("category")) {
+        const catParam = urlParams.get("category").toLowerCase();
+        tabs.forEach(t => {
+          if (t.getAttribute("data-cat").toLowerCase() === catParam) {
+            tabs.forEach(tab => tab.classList.remove("is-active", "active"));
+            t.classList.add("is-active");
+            activeCategory = catParam;
+          }
+        });
+      }
 
       function renderEquipment() {
         const q = searchInput.value.toLowerCase().trim();
         const sort = sortSelect.value;
 
         let filtered = equipmentList.filter(item => {
-          if (activeCategory !== "all" && item.category !== activeCategory) {
-            return false;
+          if (activeCategory !== "all") {
+            const itemCat = (item.category || "").toLowerCase();
+            const targetCat = activeCategory.toLowerCase();
+            const rootTarget = targetCat.replace(/s$/, "");
+            const rootItem = itemCat.replace(/s$/, "");
+            if (rootItem !== rootTarget && !itemCat.includes(rootTarget) && !targetCat.includes(rootItem)) {
+              return false;
+            }
           }
           if (q) {
-            const matchesTitle = item.title.toLowerCase().includes(q);
-            const matchesBrand = item.brand.toLowerCase().includes(q);
-            const matchesDesc = item.description.toLowerCase().includes(q);
-            if (!matchesTitle && !matchesBrand && !matchesDesc) return false;
+            const matchesTitle = (item.title || "").toLowerCase().includes(q);
+            const matchesBrand = (item.brand || "").toLowerCase().includes(q);
+            const matchesDesc = (item.description || "").toLowerCase().includes(q);
+            const matchesCat = (item.category || "").toLowerCase().includes(q);
+            if (!matchesTitle && !matchesBrand && !matchesDesc && !matchesCat) return false;
           }
           return true;
         });
@@ -558,10 +575,11 @@
 
         emptyState.classList.add("hidden");
         grid.innerHTML = filtered.map(item => `
-          <div class="product-card rounded-2xl overflow-hidden flex flex-col justify-between group p-4">
-            <div>
-              <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-stone-200 dark:bg-stone-800 mb-4">
-                <a href="product-details.html?id=${item.id}" class="block w-full h-full">
+          <div class="product-card rounded-2xl overflow-hidden flex flex-col justify-between group p-4 h-full bg-white dark:bg-[#201D19] border border-stone-200 dark:border-stone-800 shadow-sm transition hover:shadow-md">
+            <div class="flex-1 flex flex-col">
+              <!-- Image Container -->
+              <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-stone-200 dark:bg-stone-800 mb-3.5 shrink-0">
+                <a href="product-details.html?id=${item.id}" class="block w-full h-full" title="${item.title}">
                   <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </a>
                 <span class="absolute top-2.5 left-2.5 text-[10px] font-bold px-2.5 py-1 rounded-full badge-gold">${item.badge || item.condition}</span>
@@ -570,30 +588,38 @@
                 </button>
               </div>
 
-              <div class="flex items-center justify-between text-xs text-[#C77945] font-semibold">
-                <span>${item.brand} • ${item.type}</span>
-                <span class="text-stone-400 text-[11px]">${item.condition}</span>
+              <!-- Brand & Condition Row (Fixed Height) -->
+              <div class="flex items-center justify-between text-xs text-[#C77945] font-semibold h-5 mb-1 shrink-0">
+                <span class="truncate max-w-[65%]">${item.brand} • ${item.type}</span>
+                <span class="text-stone-400 text-[11px] shrink-0">${item.condition}</span>
               </div>
 
-              <a href="product-details.html?id=${item.id}" class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 hover:text-[#C77945] block truncate mt-1" title="${item.title}">
-                ${item.title}
-              </a>
-              <p class="text-xs text-stone-500 mt-1 line-clamp-2 sm:min-h-[2.5rem]">${item.description}</p>
+              <!-- Product Title (Fixed 2-Line Height for perfect baseline alignment across all cards) -->
+              <div class="h-12 flex items-start shrink-0 mb-1">
+                <a href="product-details.html?id=${item.id}" class="font-serif-vintage text-base font-bold text-stone-900 dark:text-stone-100 hover:text-[#C77945] line-clamp-2 leading-snug transition" title="${item.title}">
+                  ${item.title}
+                </a>
+              </div>
 
-              <div class="flex items-center gap-1.5 mt-2 text-xs">
+              <!-- Product Description (Fixed 2-Line Height) -->
+              <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed h-10 mb-2 shrink-0">${item.description}</p>
+
+              <!-- Star Rating Row (Fixed Height) -->
+              <div class="flex items-center gap-1.5 text-xs h-5 shrink-0 mt-auto">
                 <span class="text-amber-500">★</span>
                 <span class="font-bold text-stone-800 dark:text-stone-200">${item.rating}</span>
                 <span class="text-stone-400 text-[10px]">(${item.reviewCount} reviews)</span>
               </div>
             </div>
 
-            <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2">
+            <!-- Bottom Price & Buttons Row (Always perfectly bottom-aligned) -->
+            <div class="pt-3.5 mt-3.5 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between gap-2 shrink-0">
               <div class="font-sans font-bold text-stone-900 dark:text-stone-100">
                 <span class="text-base tracking-tight">${formatPriceINR(item.price)}</span>
                 ${item.originalPrice ? `<span class="text-xs text-stone-400 font-normal line-through ms-1">${formatPriceINR(item.originalPrice)}</span>` : ''}
               </div>
               <div class="flex items-center gap-2 shrink-0">
-                <a href="product-details.html?id=${item.id}" class="btn-secondary text-xs px-2.5 py-1.5 whitespace-nowrap" title="View Specs">Specs</a>
+                <a href="product-details.html?id=${item.id}" class="btn-secondary text-xs px-2.5 py-1.5 whitespace-nowrap" title="View Technical Specifications">Specs</a>
                 <button type="button" onclick="addToCart('${item.id}')" class="btn-primary text-xs px-3 py-1.5 whitespace-nowrap">Add to Bag</button>
               </div>
             </div>

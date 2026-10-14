@@ -420,7 +420,7 @@ function setupCheckoutForm() {
     }
 
     // 2. Name validation: minimum 2 letters, alphabets only, no numbers
-    if (name.length < 2 || !/^[A-Za-z\s.'-]{2,50}$/.test(name) || /\d/.test(name)) {
+    if (name.length < 2 || !/^[A-Za-z\s.'-]{2,50}$/.test(name) || /\d/.test(name) || (name.match(/[A-Za-z]/g) || []).length < 2) {
       showNotification("Please enter a valid full name (minimum 2 letters, no numbers allowed).", "error");
       nameInput?.focus();
       return;
@@ -434,7 +434,7 @@ function setupCheckoutForm() {
       return;
     }
 
-    // 4. Phone validation: reject alphabets, require valid 10 digits
+    // 4. Phone validation: reject alphabets, require valid 10-15 digits
     if (/[a-zA-Z]/.test(phone)) {
       showNotification("Phone number must contain only numbers. Alphabets are not allowed.", "error");
       phoneInput?.focus();
@@ -447,10 +447,23 @@ function setupCheckoutForm() {
       return;
     }
 
-    // 5. PIN code validation
-    const pinDigits = pincode.replace(/\D/g, "");
-    if (pinDigits.length !== 6) {
-      showNotification("Please enter a valid 6-digit postal PIN code.", "error");
+    // 5. City validation: letters only, minimum 2 characters, no numbers
+    if (city.length < 2 || !/^[A-Za-z\s.'-]{2,40}$/.test(city) || /\d/.test(city) || (city.match(/[A-Za-z]/g) || []).length < 2) {
+      showNotification("Please enter a valid city name (minimum 2 letters, numbers not allowed).", "error");
+      cityInput?.focus();
+      return;
+    }
+
+    // 6. State validation: letters only, minimum 2 characters, no numbers
+    if (state.length < 2 || !/^[A-Za-z\s.'-]{2,40}$/.test(state) || /\d/.test(state) || (state.match(/[A-Za-z]/g) || []).length < 2) {
+      showNotification("Please enter a valid state name (minimum 2 letters, numbers not allowed).", "error");
+      stateInput?.focus();
+      return;
+    }
+
+    // 7. PIN code validation: strictly 6 digits, reject alphabets and special chars
+    if (/[a-zA-Z]/.test(pincode) || !/^[0-9]{6}$/.test(pincode)) {
+      showNotification("Please enter a valid 6-digit postal PIN code (numbers only, no alphabets).", "error");
       pincodeInput?.focus();
       return;
     }
