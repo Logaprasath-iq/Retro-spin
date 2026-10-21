@@ -7,6 +7,11 @@
   <meta name="description" content="Get in touch with RetroSpin's analog specialists in Chennai. Schedule a private listening session, source rare vinyl pressings, or request turntable repair.">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
+  <!-- Google Fonts Preconnect and Direct Stylesheet for Instant Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -26,8 +31,10 @@
           },
           fontFamily: {
             serifVintage: ['"Playfair Display"', 'Georgia', 'serif'],
-            headingDisplay: ['Cinzel', '"Playfair Display"', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+            'serif-vintage': ['"Playfair Display"', 'Georgia', 'serif'],
+            headingDisplay: ['"Cinzel"', '"Playfair Display"', 'serif'],
+            'heading-display': ['"Cinzel"', '"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
           }
         }
       }
@@ -216,7 +223,7 @@
             </div>
             <h1 class="font-serif-vintage text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Connect With <br>
-              <span class="italic text-[#D7A45B] font-normal underline decoration-[#C77945]">RetroSpin Chennai.</span>
+              <span class="text-[#D7A45B] underline decoration-[#C77945]">RetroSpin Chennai.</span>
             </h1>
             <p class="text-stone-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Whether you wish to schedule a private audition in our Nungambakkam listening lounge, source an elusive Japanese Blue Note pressing, or bring in your vintage turntable for precision cartridge alignment, our specialists look forward to assisting you.
@@ -515,7 +522,7 @@
   </main>
 
   <!-- Complete Standard Footer -->
-  <footer class="bg-[#171614] text-stone-400 border-t border-[#29231D] pt-16 pb-12">
+  <footer class="bg-[#171614] text-white border-t border-[#29231D] pt-16 pb-12">
     <div class="site-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#29231D]">
       
       <!-- Brand & Mission -->
@@ -529,26 +536,26 @@
             <span class="text-[7.5px] min-[380px]:text-[8px] sm:text-[9px] xl:text-[10px] tracking-[0.16em] sm:tracking-[0.25em] uppercase text-[#C77945] font-semibold -mt-0.5">Vinyl & Hi-Fi</span>
           </div>
         </a>
-        <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+        <p class="text-xs text-stone-200 leading-relaxed max-w-sm">
           A dedicated sanctuary for vintage vinyl preservation and high-fidelity sound. Every record is play-graded, ultrasonically cleaned, and shipped in climate-resilient packaging.
         </p>
 
         <!-- Social Buttons -->
         <div class="flex items-center gap-3 pt-2">
           <!-- WhatsApp with official SVG -->
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Chat on WhatsApp">
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-white flex items-center justify-center transition" title="Chat on WhatsApp">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.2.3-.778.978-.953 1.179-.176.2-.351.226-.652.075s-1.272-.469-2.423-1.497c-.896-.799-1.501-1.788-1.677-2.089-.176-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.1-.2.05-.376-.025-.526-.075-.15-.677-1.631-.927-2.233-.244-.587-.492-.507-.677-.517l-.577-.01c-.2 0-.527.075-.802.376s-1.053 1.028-1.053 2.508 1.078 2.909 1.229 3.109c.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.634.721.23 1.377.197 1.896.12.578-.087 1.78-.727 2.031-1.429.251-.702.251-1.304.176-1.429-.076-.125-.276-.2-.577-.35zM12 2C6.486 2 2 6.486 2 12c0 1.846.502 3.582 1.377 5.081L2 22l5.06-1.328C8.513 21.524 10.207 22 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.574 0-3.082-.435-4.382-1.258l-.314-.197-3.003.788.802-2.926-.216-.344C4.019 14.73 3.5 13.398 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/></svg>
           </a>
           <!-- Instagram -->
-          <a href="https://instagram.com/retrospin.vinyl" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Follow on Instagram">
+          <a href="https://instagram.com/retrospin.vinyl" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-white flex items-center justify-center transition" title="Follow on Instagram">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
           <!-- Twitter / X -->
-          <a href="https://x.com/retrospin" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Follow on X">
+          <a href="https://x.com/retrospin" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-white flex items-center justify-center transition" title="Follow on X">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
           <!-- Facebook -->
-          <a href="https://facebook.com/retrospin.store" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-stone-300 flex items-center justify-center transition" title="Facebook Page">
+          <a href="https://facebook.com/retrospin.store" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#29231D] border border-[#3A3229] hover:border-[#D7A45B] hover:text-[#D7A45B] text-white flex items-center justify-center transition" title="Facebook Page">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.808C10.595 0 9 1.583 9 4.615V8z"/></svg>
           </a>
         </div>
@@ -558,12 +565,12 @@
       <div class="space-y-3">
         <h5 class="text-xs font-bold uppercase tracking-wider text-white">Catalog & Store</h5>
         <ul class="space-y-2 text-xs">
-          <li><a href="index.html" class="hover:text-white transition">Home 1 (Vintage)</a></li>
-          <li><a href="home2.html" class="hover:text-white transition">Home 2 (Hi-Fi Lounge)</a></li>
-          <li><a href="shop.html" class="hover:text-white transition">Shop Vinyl Records</a></li>
-          <li><a href="equipment.html" class="hover:text-white transition">Turntables & Hi-Fi</a></li>
-          <li><a href="gallery.html" class="hover:text-white transition">Visual Gallery</a></li>
-          <li><a href="pricing.html" class="hover:text-white transition">Pricing & Grading Scale</a></li>
+          <li><a href="index.html" class="text-white hover:text-[#D7A45B] transition">Home 1 (Vintage)</a></li>
+          <li><a href="home2.html" class="text-white hover:text-[#D7A45B] transition">Home 2 (Hi-Fi Lounge)</a></li>
+          <li><a href="shop.html" class="text-white hover:text-[#D7A45B] transition">Shop Vinyl Records</a></li>
+          <li><a href="equipment.html" class="text-white hover:text-[#D7A45B] transition">Turntables & Hi-Fi</a></li>
+          <li><a href="gallery.html" class="text-white hover:text-[#D7A45B] transition">Visual Gallery</a></li>
+          <li><a href="pricing.html" class="text-white hover:text-[#D7A45B] transition">Pricing & Grading Scale</a></li>
         </ul>
       </div>
 
@@ -571,32 +578,32 @@
       <div class="space-y-3">
         <h5 class="text-xs font-bold uppercase tracking-wider text-white">Customer Support</h5>
         <ul class="space-y-2 text-xs">
-          <li><a href="orders.html" class="hover:text-white transition">Your Bag & Orders</a></li>
-          <li><a href="pricing.html#shipping" class="hover:text-white transition">Shipping & Delivery Info</a></li>
-          <li><a href="pricing.html#returns" class="hover:text-white transition">Return & Exchange Policy</a></li>
-          <li><a href="contact.html#faqs" class="hover:text-white transition">Frequently Asked Questions</a></li>
-          <li><a href="about.html#sourcing" class="hover:text-white transition">Record Sourcing Standards</a></li>
-          <li><a href="contact.html" class="hover:text-white transition">Help & Inquiries</a></li>
+          <li><a href="orders.html" class="text-white hover:text-[#D7A45B] transition">Your Bag & Orders</a></li>
+          <li><a href="pricing.html#shipping" class="text-white hover:text-[#D7A45B] transition">Shipping & Delivery Info</a></li>
+          <li><a href="pricing.html#returns" class="text-white hover:text-[#D7A45B] transition">Return & Exchange Policy</a></li>
+          <li><a href="contact.html#faqs" class="text-white hover:text-[#D7A45B] transition">Frequently Asked Questions</a></li>
+          <li><a href="about.html#sourcing" class="text-white hover:text-[#D7A45B] transition">Record Sourcing Standards</a></li>
+          <li><a href="contact.html" class="text-white hover:text-[#D7A45B] transition">Help & Inquiries</a></li>
         </ul>
       </div>
 
       <!-- Visit Us in Chennai -->
       <div class="space-y-3">
         <h5 class="text-xs font-bold uppercase tracking-wider text-white">Chennai Lounge</h5>
-        <div class="space-y-1.5 text-xs text-stone-400">
+        <div class="space-y-1.5 text-xs text-white">
           <p class="text-white font-medium">RetroSpin Flagship Lounge</p>
           <p>28 Khader Nawaz Khan Road, Nungambakkam</p>
           <p>Chennai, Tamil Nadu 600006</p>
-          <p class="pt-2"><strong class="text-stone-300">Hours:</strong> 10:00 AM – 9:00 PM</p>
-          <p><strong class="text-stone-300">WhatsApp:</strong> +91 98765 43210</p>
-          <p><strong class="text-stone-300">Email:</strong> contact@retrospin.in</p>
+          <p class="pt-2 text-white"><strong class="font-semibold text-white">Hours:</strong> 10:00 AM – 9:00 PM</p>
+          <p class="text-white"><strong class="font-semibold text-white">WhatsApp:</strong> +91 98765 43210</p>
+          <p class="text-white"><strong class="font-semibold text-white">Email:</strong> contact@retrospin.in</p>
         </div>
       </div>
 
     </div>
 
     <!-- Centered Copyright -->
-    <div class="site-container pt-8 text-center text-xs text-stone-500">
+    <div class="site-container pt-8 text-center text-xs text-stone-300">
       &copy; 2026 RetroSpin Audio & Vinyl Boutique. All Rights Reserved.
     </div>
   </footer>

@@ -166,6 +166,13 @@ function applyCoupon(code) {
   }
 
   const totals = calculateCartTotals();
+  if (totals.items.length === 0) {
+    return { 
+      success: false, 
+      message: "Your bag is empty! Add records or equipment before applying a coupon." 
+    };
+  }
+
   const coupon = VALID_COUPONS[cleanCode];
 
   if (totals.subtotal < coupon.minSpend) {

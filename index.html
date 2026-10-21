@@ -7,6 +7,11 @@
   <meta name="description" content="Discover rare vintage vinyl records, precision turntables, tube amplifiers, and high-fidelity audio equipment at RetroSpin.">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
+  <!-- Google Fonts Preconnect and Direct Stylesheet for Instant Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -26,8 +31,10 @@
           },
           fontFamily: {
             serifVintage: ['"Playfair Display"', 'Georgia', 'serif'],
-            headingDisplay: ['Cinzel', '"Playfair Display"', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+            'serif-vintage': ['"Playfair Display"', 'Georgia', 'serif'],
+            headingDisplay: ['"Cinzel"', '"Playfair Display"', 'serif'],
+            'heading-display': ['"Cinzel"', '"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
           }
         }
       }
@@ -221,13 +228,12 @@
           
           <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-gold text-xs font-semibold uppercase tracking-wider">
-              <span class="w-2 h-2 rounded-full bg-[#C77945]"></span>
               Handpicked Original Master Pressings & Hi-Fi Gear
             </div>
             
-            <h1 class="font-serif-vintage text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.15] text-[#29231D] dark:text-[#F4E7CE]">
+            <h1 class="font-serif-vintage text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#29231D] dark:text-[#F4E7CE]">
               The Sound of <br class="hidden sm:inline">
-              <span class="italic text-[#C77945] font-normal underline decoration-[#D7A45B]/60 decoration-wavy">Another Era.</span>
+              <span class="text-[#C77945] dark:text-[#D7A45B] underline decoration-[#C77945]">Another Era.</span>
             </h1>
 
             <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
@@ -290,13 +296,13 @@
               </div>
 
               <!-- Floating High-Fidelity Tag with Float Animation -->
-              <div class="absolute -bottom-4 sm:-bottom-5 left-1 sm:-left-6 lg:-left-4 xl:-left-8 max-w-[calc(100%-0.5rem)] sm:max-w-none bg-white/95 dark:bg-[#25201A]/95 backdrop-blur-md p-2.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-2xl border border-stone-200/90 dark:border-stone-700/90 flex items-center gap-2.5 sm:gap-3 animate-float z-20">
-                <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl overflow-hidden shrink-0 border border-[#D7A45B]/40 bg-stone-900 shadow-md">
+              <div class="absolute -bottom-4 sm:-bottom-5 left-1 sm:-left-6 lg:-left-4 xl:-left-8 max-w-[calc(100%-0.5rem)] sm:max-w-none bg-white/95 dark:bg-[#25201A]/95 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-2xl border border-stone-200/90 dark:border-stone-700/90 flex items-center gap-3 animate-float z-20">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 border border-[#D7A45B]/40 bg-stone-900 shadow-md">
                   <img src="assets/images/logo.png" alt="RetroSpin" class="w-full h-full object-contain p-1">
                 </div>
                 <div class="min-w-0">
-                  <div class="text-[11.5px] min-[380px]:text-xs sm:text-sm font-bold text-stone-900 dark:text-stone-100 truncate">Miles Davis — Kind of Blue</div>
-                  <div class="text-[9.5px] min-[380px]:text-[10px] sm:text-xs text-[#C77945] font-semibold truncate">180g Pure Analog Master • Pristine NM</div>
+                  <div class="text-xs sm:text-sm font-bold text-stone-900 dark:text-stone-100 truncate">Miles Davis — Kind of Blue</div>
+                  <div class="text-xs text-[#C77945] font-semibold truncate">180g Pure Analog Master • Pristine NM</div>
                 </div>
               </div>
 
@@ -541,13 +547,15 @@
             <div class="rounded-3xl overflow-hidden shadow-2xl border border-stone-200 dark:border-stone-800 aspect-[4/3] bg-stone-900">
               <img src="https://i.pinimg.com/736x/72/8c/0e/728c0e9834e45c45d3b16ae0a1995f68.jpg" alt="Artisan Turntable" class="w-full h-full object-cover">
             </div>
-            <div class="absolute -bottom-3 sm:-bottom-5 right-2 sm:-right-4 lg:-right-6 bg-white/95 dark:bg-[#201D19]/95 backdrop-blur-md p-2.5 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border border-stone-200/90 dark:border-stone-800 w-[190px] min-[360px]:w-[210px] min-[400px]:w-[230px] sm:w-[260px] lg:w-72 animate-float-delayed">
-              <span class="text-[8px] min-[380px]:text-[9px] sm:text-[10px] uppercase tracking-wider font-bold text-[#C77945] block">Flagship Release</span>
+            <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-white/95 dark:bg-[#201D19]/95 backdrop-blur-md p-3 sm:p-3.5 rounded-2xl shadow-xl border border-stone-200/90 dark:border-stone-800 w-[230px] min-[380px]:w-[250px] sm:w-[270px] max-w-[calc(100%-1.5rem)] z-20">
+              <span class="text-[9.5px] sm:text-[10.5px] uppercase tracking-wider font-bold text-[#C77945] block">Flagship Release</span>
               <h4 class="font-serif-vintage font-bold text-xs min-[380px]:text-sm sm:text-base text-stone-900 dark:text-stone-100 leading-tight mt-0.5 truncate">Artisan Walnut Belt-Drive</h4>
-              <p class="text-[9.5px] min-[380px]:text-[10.5px] sm:text-xs text-stone-500 mt-0.5 sm:mt-1 leading-snug line-clamp-1 sm:line-clamp-2">Carbon-fiber tonearm with AT diamond stylus.</p>
-              <div class="mt-2 sm:mt-2.5 flex items-center justify-between pt-1.5 border-t border-stone-200/50 dark:border-stone-800/60">
+              <p class="text-[10px] sm:text-[11px] text-stone-500 dark:text-stone-400 mt-0.5 leading-snug line-clamp-1 sm:line-clamp-2">Carbon-fiber tonearm with AT diamond stylus.</p>
+              <div class="mt-2.5 pt-2 flex items-center justify-between border-t border-stone-200/70 dark:border-stone-800">
                 <span class="text-xs min-[380px]:text-sm sm:text-base font-bold text-[#C77945]">₹24,999</span>
-                <a href="product-details.html?id=eq-001" class="text-[10px] min-[380px]:text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-[#C77945] flex items-center gap-0.5">Details &rarr;</a>
+                <a href="product-details.html?id=eq-001" class="text-[11px] sm:text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-[#C77945] flex items-center gap-1 transition">
+                  Details <span class="rtl-mirror">&rarr;</span>
+                </a>
               </div>
             </div>
           </div>
@@ -928,7 +936,7 @@
   </main>
 
   <!-- Complete Standard Footer -->
-  <footer class="bg-[#201D19] text-[#D8C9B4] border-t border-[#3A3229] pt-16 pb-8">
+  <footer class="bg-[#201D19] text-white border-t border-[#3A3229] pt-16 pb-8">
     <div class="site-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#3A3229]">
       
       <!-- Brand & Mission Column -->
@@ -942,7 +950,7 @@
             <span class="text-[7.5px] min-[380px]:text-[8px] sm:text-[9px] xl:text-[10px] tracking-[0.16em] sm:tracking-[0.25em] uppercase text-[#C77945] font-semibold -mt-0.5">Vinyl & Hi-Fi</span>
           </div>
         </a>
-        <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+        <p class="text-xs text-stone-200 leading-relaxed max-w-sm">
           A dedicated sanctuary for vintage vinyl preservation and high-fidelity sound. Every record is play-graded, ultrasonically cleaned, and shipped in climate-resilient packaging.
         </p>
 
@@ -971,12 +979,12 @@
       <div class="space-y-3">
         <h5 class="text-xs font-bold uppercase tracking-wider text-white">Catalog & Store</h5>
         <ul class="space-y-2 text-xs">
-          <li><a href="index.html" class="hover:text-white transition">Home 1 (Vintage)</a></li>
-          <li><a href="home2.html" class="hover:text-white transition">Home 2 (Hi-Fi Lounge)</a></li>
-          <li><a href="shop.html" class="hover:text-white transition">Shop Vinyl Records</a></li>
-          <li><a href="equipment.html" class="hover:text-white transition">Turntables & Hi-Fi</a></li>
-          <li><a href="gallery.html" class="hover:text-white transition">Visual Gallery</a></li>
-          <li><a href="pricing.html" class="hover:text-white transition">Pricing & Grading Scale</a></li>
+          <li><a href="index.html" class="text-white hover:text-[#D7A45B] transition">Home 1 (Vintage)</a></li>
+          <li><a href="home2.html" class="text-white hover:text-[#D7A45B] transition">Home 2 (Hi-Fi Lounge)</a></li>
+          <li><a href="shop.html" class="text-white hover:text-[#D7A45B] transition">Shop Vinyl Records</a></li>
+          <li><a href="equipment.html" class="text-white hover:text-[#D7A45B] transition">Turntables & Hi-Fi</a></li>
+          <li><a href="gallery.html" class="text-white hover:text-[#D7A45B] transition">Visual Gallery</a></li>
+          <li><a href="pricing.html" class="text-white hover:text-[#D7A45B] transition">Pricing & Grading Scale</a></li>
         </ul>
       </div>
 
@@ -984,32 +992,32 @@
       <div class="space-y-3">
         <h5 class="text-xs font-bold uppercase tracking-wider text-white">Customer Support</h5>
         <ul class="space-y-2 text-xs">
-          <li><a href="orders.html" class="hover:text-white transition">Your Bag & Orders</a></li>
-          <li><a href="pricing.html#shipping" class="hover:text-white transition">Shipping & Delivery Info</a></li>
-          <li><a href="pricing.html#returns" class="hover:text-white transition">Return & Exchange Policy</a></li>
-          <li><a href="contact.html#faqs" class="hover:text-white transition">Frequently Asked Questions</a></li>
-          <li><a href="about.html#sourcing" class="hover:text-white transition">Record Sourcing Standards</a></li>
-          <li><a href="contact.html" class="hover:text-white transition">Help & Inquiries</a></li>
+          <li><a href="orders.html" class="text-white hover:text-[#D7A45B] transition">Your Bag & Orders</a></li>
+          <li><a href="pricing.html#shipping" class="text-white hover:text-[#D7A45B] transition">Shipping & Delivery Info</a></li>
+          <li><a href="pricing.html#returns" class="text-white hover:text-[#D7A45B] transition">Return & Exchange Policy</a></li>
+          <li><a href="contact.html#faqs" class="text-white hover:text-[#D7A45B] transition">Frequently Asked Questions</a></li>
+          <li><a href="about.html#sourcing" class="text-white hover:text-[#D7A45B] transition">Record Sourcing Standards</a></li>
+          <li><a href="contact.html" class="text-white hover:text-[#D7A45B] transition">Help & Inquiries</a></li>
         </ul>
       </div>
 
       <!-- Visit Us in Chennai -->
       <div class="space-y-3">
         <h5 class="text-xs font-bold uppercase tracking-wider text-white">Chennai Lounge</h5>
-        <div class="space-y-1.5 text-xs text-stone-400">
-          <p class="text-white font-medium">RetroSpin Flagship Lounge</p>
-          <p>28 Khader Nawaz Khan Road, Nungambakkam</p>
-          <p>Chennai, Tamil Nadu 600006</p>
-          <p class="pt-2"><strong class="text-stone-300">Hours:</strong> 10:00 AM – 9:00 PM</p>
-          <p><strong class="text-stone-300">WhatsApp:</strong> +91 98765 43210</p>
-          <p><strong class="text-stone-300">Email:</strong> contact@retrospin.in</p>
+        <div class="space-y-1.5 text-xs text-white">
+          <p class="font-medium text-white">RetroSpin Flagship Lounge</p>
+          <p class="text-white">28 Khader Nawaz Khan Road, Nungambakkam</p>
+          <p class="text-white">Chennai, Tamil Nadu 600006</p>
+          <p class="pt-2 text-white"><strong class="font-semibold text-white">Hours:</strong> 10:00 AM – 9:00 PM</p>
+          <p class="text-white"><strong class="font-semibold text-white">WhatsApp:</strong> +91 98765 43210</p>
+          <p class="text-white"><strong class="font-semibold text-white">Email:</strong> contact@retrospin.in</p>
         </div>
       </div>
 
     </div>
 
     <!-- Centered Copyright -->
-    <div class="site-container pt-8 text-center text-xs text-stone-500">
+    <div class="site-container pt-8 text-center text-xs text-stone-300">
       &copy; 2026 RetroSpin Audio & Vinyl Boutique. All Rights Reserved.
     </div>
   </footer>

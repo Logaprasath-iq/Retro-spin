@@ -93,7 +93,7 @@ function renderCartSection() {
   const discountRow = document.getElementById("summary-discount-row");
   const couponTagEl = document.getElementById("summary-coupon-tag");
   const shippingEl = document.getElementById("summary-shipping");
-  const totalEl = document.getElementById("summary-total");
+  const totalEl = document.getElementById("summary-final-total") || document.getElementById("summary-total");
   const itemCountBadge = document.getElementById("bag-items-count-badge");
 
   if (!cartContainer) return;
@@ -165,10 +165,12 @@ function renderCartSection() {
   if (totals.discount > 0) {
     if (discountRow) discountRow.classList.remove("hidden");
     if (discountEl) discountEl.textContent = `- ${formatPriceINR(totals.discount)}`;
-    if (couponTagEl) couponTagEl.textContent = `Coupon: ${totals.appliedCoupon}`;
+    if (couponTagEl) couponTagEl.textContent = `(${totals.appliedCoupon})`;
   } else {
     if (discountRow) discountRow.classList.add("hidden");
   }
+
+  updateCouponBox(totals);
 }
 
 // ------------------------------------
@@ -363,22 +365,138 @@ function cancelSampleOrder(orderId) {
 }
 
 // ------------------------------------
+// Coupon Box Logic & Interaction
+// ------------------------------------
+function updateCouponBox(totals) {
+  const codeInput = document.getElementById("coupon-code-input");
+  const applyBtn = document.getElementById("apply-coupon-btn");
+  const msgEl = document.getElementById("coupon-message");
+  const appliedCoupon = getAppliedCoupon();
+
+  if (appliedCoupon && totals && totals.discount > 0) {
+    if (codeInput) {
+      codeInput.value = appliedCoupon;
+      codeInput.disabled = true;
+    }
+    if (applyBtn) {
+      applyBtn.textContent = "Remove";
+      applyBtn.className = "btn-secondary text-xs px-3.5 py-2 shrink-0 text-rose-600 dark:text-rose-400 border-rose-300 dark:border-rose-800 hover:bg-rose-50 dark:hover:bg-rose-950/40";
+    }
+    if (msgEl) {
+      msgEl.className = "text-[11px] mt-1.5 font-semibold text-emerald-600 dark:text-emerald-400 block";
+      const desc = VALID_COUPONS[appliedCoupon] ? VALID_COUPONS[appliedCoupon].description : "Discount applied";
+      msgEl.textContent = `✓ Coupon '${appliedCoupon}' active (${desc})`;
+    }
+  } else {
+    if (codeInput) {
+      codeInput.disabled = false;
+      if (!appliedCoupon) codeInput.value = "";
+    }
+    if (applyBtn) {
+      applyBtn.textContent = "Apply";
+      applyBtn.className = "btn-secondary text-xs px-4 py-2 shrink-0";
+    }
+    if (msgEl && !msgEl.dataset.keepMessage) {
+      msgEl.className = "text-[11px] mt-1.5 hidden font-semibold";
+      msgEl.textContent = "";
+    }
+  }
+}
+
+function handleCouponSubmit() {
+  const codeInput = document.getElementById("coupon-code-input");
+  const applyBtn = document.getElementById("apply-coupon-btn");
+  const msgEl = document.getElementById("coupon-message");
+  if (!codeInput) return;
+
+  const currentApplied = getAppliedCoupon();
+  if (currentApplied && applyBtn && applyBtn.textContent.trim().toLowerCase() === "remove") {
+    removeCoupon();
+    if (codeInput) {
+      codeInput.value = "";
+      codeInput.disabled = false;
+    }
+    if (msgEl) {
+      msgEl.dataset.keepMessage = "true";
+      msgEl.className = "text-[11px] mt-1.5 font-semibold text-stone-500 dark:text-stone-400 block";
+      msgEl.textContent = "Coupon removed.";
+      setTimeout(() => {
+        delete msgEl.dataset.keepMessage;
+        if (msgEl && !getAppliedCoupon()) msgEl.classList.add("hidden");
+      }, 3000);
+    }
+    if (typeof showNotification === "function") {
+      showNotification("Coupon removed from your bag.", "info");
+    }
+    renderCartSection();
+    return;
+  }
+
+  const code = (codeInput.value || "").trim().toUpperCase();
+  if (!code) {
+    if (msgEl) {
+      msgEl.dataset.keepMessage = "true";
+      msgEl.className = "text-[11px] mt-1.5 font-semibold text-rose-600 dark:text-rose-400 block";
+      msgEl.textContent = "Please enter a promotional code.";
+    }
+    if (typeof showNotification === "function") {
+      showNotification("Please enter a promotional code.", "error");
+    }
+    return;
+  }
+
+  const res = applyCoupon(code);
+  if (res.success) {
+    if (msgEl) {
+      delete msgEl.dataset.keepMessage;
+      msgEl.className = "text-[11px] mt-1.5 font-semibold text-emerald-600 dark:text-emerald-400 block";
+      msgEl.textContent = `✓ ${res.message}`;
+    }
+    if (typeof showNotification === "function") {
+      showNotification(res.message, "success");
+    }
+    renderCartSection();
+  } else {
+    if (msgEl) {
+      msgEl.dataset.keepMessage = "true";
+      msgEl.className = "text-[11px] mt-1.5 font-semibold text-rose-600 dark:text-rose-400 block";
+      msgEl.textContent = res.message;
+    }
+    if (typeof showNotification === "function") {
+      showNotification(res.message, "error");
+    }
+  }
+}
+
+// Global helper for clickable coupon chips
+window.applySuggestedCoupon = function(code) {
+  const codeInput = document.getElementById("coupon-code-input");
+  if (codeInput) {
+    codeInput.value = code;
+    handleCouponSubmit();
+  }
+};
+
+// ------------------------------------
 // Checkout Form Submission & Validation
 // ------------------------------------
 function setupCheckoutForm() {
   const form = document.getElementById("checkout-form");
-  const couponForm = document.getElementById("coupon-form");
+  const applyBtn = document.getElementById("apply-coupon-btn");
+  const couponInput = document.getElementById("coupon-code-input");
 
-  if (couponForm) {
-    couponForm.addEventListener("submit", (e) => {
+  if (applyBtn) {
+    applyBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      const codeInput = document.getElementById("coupon-input");
-      if (!codeInput) return;
-      const res = applyCoupon(codeInput.value);
-      if (res.success) {
-        showNotification(res.message, "success");
-      } else {
-        showNotification(res.message, "error");
+      handleCouponSubmit();
+    });
+  }
+
+  if (couponInput) {
+    couponInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        handleCouponSubmit();
       }
     });
   }
